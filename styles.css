@@ -1,0 +1,91 @@
+#dota-icon{
+    height:65px; 
+    width:65px;
+    margin-top: 0px;
+    float: left;
+}
+
+body{
+    background-color: #1A1A1A
+}
+
+h1{
+    color:#b7b7b7;
+    font-family: Palatino;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 30px;
+}
+
+h2{
+    color:#b7b7b7;
+    margin-left: 200px;
+    margin-bottom: 45px;
+    margin-top: 45px;
+}
+
+#pos1{
+    color: red;
+    margin-left: 250px;
+    margin-bottom: 45px;
+    margin-top: 45px;
+}
+
+#pos2{
+    color:blue;
+    margin-left: 250px;
+    margin-bottom: 45px;
+    margin-top: 45px;
+}
+
+p{
+    color: #b7b7b7;
+    font-size: 110%;
+}
+
+#hero-img{
+    width: 90px;
+    height: 55px;
+    display: block;
+}
+
+#rank-img{
+    inline-size: 20%;
+}
+
+table ,th, td {
+    margin: 0px auto;
+    border: 1px solid #b7b7b7;
+    border-collapse: collapse;
+}
+
+
+div{
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
