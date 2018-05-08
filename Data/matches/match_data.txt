@@ -1,0 +1,20 @@
+-match_id
+-draft_timings.order //ordem de picks/bans
+-draft_timings.pick //pick ou ban
+-draft_timings.hero_id //hero pickado
+
+
+-------------------------------------------
+league.leagueid
+league.name
+picks_bans.is_pick
+picks_bans.hero_id
+picks_bans.order
+radiant_team.team_id
+radiant_team.name
+radiant_team.tag
+radiant_team.logo_url
+dire_team."
+players.ability_upgrades_arr
+players.account_id
+players.purchase_log
