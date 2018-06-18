@@ -4,51 +4,66 @@
 <head>
     <title>Minha pagina</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles/index_style.css">
 </head>
 
 <body>
-    <img id= "dota-icon" src="dota_2.png">
-    <span>Dota Pro</span>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-    </ul>
-    <h1>DOTA 2 Tier list</h1>
-
-    <div>
-        <table>
-        <tr>
-            <th colspan="2"><p>Hero</p></th>
-            <th><img id = "rank-img" src="rank-icons/herald.png"></th>
-            <th><img id = "rank-img" src="rank-icons/guardian.png"></th>
-            <th><img id = "rank-img" src="rank-icons/crusader.png"></th>
-            <th><img id = "rank-img" src="rank-icons/archon.png"></th>
-            <th><img id = "rank-img" src="rank-icons/legend.png"></th>
-            <th><img id = "rank-img" src="rank-icons/ancient.png"></th>
-            <th><img id = "rank-img" src="rank-icons/divine.png"></th>
-        </tr>
-
-        <tr>
-            <th><img id ="hero-img" src="Hero-icons/gyrocopeter.jpg"></th>
-            <th><p>Gyrocopter</p></th>
-            <th><p>49.22%</p></th>
-            <th><p>49.22%</p></th>
-            <th><p>49.22%</p></th>
-            <th><p>47.32%</p></th>
-            <th><p>45.25%</p></th>
-            <th><p>45.28%</p></th>
-            <th><p>47.31%</p></th>
-            
-        </tr>
-        <tr>
-            <th><img id ="hero-img" src="Hero-icons/terrorblade.jpg"><p>Terrorblade</p></th>
-        </tr>
-        </table>
-    
+    <div class="nav_bar">
+        <div class="nav_container">
+            <img class="logo" src="../DotaproLogo.png"></a>
+            <ul>
+                <li><a>Tournaments</a></li>
+                <li><a>Teams</a></li>
+                <li><a>Players</a></li>
+            </ul>
+        </div>    
     </div>
+
+    <div class="main">
+        <div class="div_busca">
+            <h1>Tournaments</h1>
+            <form class="form_busca">
+                <input class="busca" type="text" placeholder="Search for a tournament">
+                <input class="btn_busca" type="submit" value="Buscar">
+            </form>
+        </div>
+
+        <h2>Recent Tournaments</h2>
+
+        <section class="tournament_list">
+            <section class="tournament">
+                <img class="tournament_logo" src="../mdl_changsha.jpg">
+                <div class="tournament_info">
+                    <h3>MDL Changsha Major</h3>
+                    <span class="tournament_desc">Event date: xx/yy/zzzz</span>
+                    <br>
+                    <span class="tournament_desc">Tier: Major</span>
+                </div>
+            </section>
+            
+            <section class="tournament">
+                <img class="tournament_logo" src="../dac2018.jpg">
+                <div class="tournament_info">
+                    <h3>Dota Asia Championship 2018</h3>
+                    <span class="tournament_desc">Event date: xx/yy/zzzz</span>
+                    <br>
+                    <span class="tournament_desc">Tier: Major</span>
+                </div>    
+            </section>
+
+            <section class="tournament">
+                    <img class="tournament_logo" src="../epicenter.png">
+                    <div class="tournament_info">
+                        <h3>EPICENTER XL</h3>
+                        <span class="tournament_desc">Event date: xx/yy/zzzz</span>
+                        <br>
+                        <span class="tournament_desc">Tier: Major</span>
+                    </div>    
+                </section>
+
+        </section>
+    </div>
+
     
 
 </body>
