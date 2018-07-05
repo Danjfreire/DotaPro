@@ -1,0 +1,46 @@
+.pageTitle {
+  color: #ffc400; }
+
+.descricao {
+  font-size: 20px; }
+
+  
+.team_img_mini{
+  width: 30px;
+  height: auto;
+  margin: 5px;
+}
+
+.team_img_mini2{
+  width: 22px;
+  height: auto;
+  margin: 2px;
+}
+
+.float_right{
+  float: right;
+  display: block;
+}
+
+.transparente {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+.pick{
+  margin: 3px;
+}
+
+.hero_pick{
+  width:40px;
+  height: auto;
+}
+
+.celula{
+  vertical-align:middle;
+  height: auto;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+/*# sourceMappingURL=styles.css.map */
