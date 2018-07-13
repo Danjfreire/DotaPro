@@ -1,26 +1,26 @@
 <template>
-  <Navbar></Navbar>
+  <body>
+    <Navbar></Navbar>
+    <Tournaments></Tournaments>
+  </body>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
-import './css/custom.css'
+import Navbar from "./components/Navbar.vue";
+import Tournaments from "./components/Tournaments.vue";
+import "./css/custom.css";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    Navbar
+    Navbar,
+    Tournaments
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  background-image: url("./assets/Backgrounds/rsz_1aegis_background.jpg");
 }
 </style>
