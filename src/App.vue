@@ -1,20 +1,18 @@
 <template>
-  <body>
+<body>
     <Navbar></Navbar>
-    <Tournaments></Tournaments>
-  </body>
+    <router-view/>
+</body>
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
-import Tournaments from "./components/Tournaments.vue";
 import "./css/custom.css";
 
 export default {
-  name: "app",
+  name: "App",
   components: {
-    Navbar,
-    Tournaments
+    Navbar
   }
 };
 </script>

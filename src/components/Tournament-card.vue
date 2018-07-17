@@ -6,7 +6,7 @@
               <img v-bind:src="require('../assets/Tournaments/'+ campeonato.t_logo)" class="w-100">
             </div>
             <div class="card-block col-md-4 px-3">
-              <h3 class="card-title pageTitle">{{campeonato.t_name}}</h3>
+              <h3><a class="pageTitle" href="#/tournament">{{campeonato.t_name}}</a></h3>
               <span class="card-text text-red descricao" >{{campeonato.t_tier}}</span>
               <br>
               <span class="card-text text-silver">{{campeonato.t_startDate}} | {{campeonato.t_endDate}}</span>

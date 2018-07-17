@@ -9,13 +9,13 @@
         <div class="collapse navbar-collapse" id="navbarSite">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link text-silver" href="#">Tournaments</a>
+                    <a class="nav-link text-silver" href="#/">Tournaments</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-silver" href="#">Teams</a>
+                    <a class="nav-link text-silver" href="#/teams">Teams</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-silver" href="#">Players</a>
+                    <a class="nav-link text-silver" href="#/players">Players</a>
                 </li>
             </ul>
         </div>

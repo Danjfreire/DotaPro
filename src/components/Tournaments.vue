@@ -1,5 +1,4 @@
-<template>
-    <body background="./assets/Backgrounds/rsz_1aegis_background.jpg"> 
+<template>   
     <div class="container transparente">
     <h1 class="pageTitle text-center">Tournaments</h1>
     <br>
@@ -17,7 +16,6 @@
           <Tcard v-bind:items="tournaments"></Tcard>
       </section>
     </div>
-    </body>
 </template>
 
 <script>
@@ -40,7 +38,7 @@ export default {
           t_prizePool: "$1,500,000",
           t_dpcPoints: "2250",
           t_firstPlace: "Team Liquid",
-          t_firstPlaceLogo: "600px-Team_liquid_logo_2017.png",
+          t_firstPlaceLogo: "Team_Liquid.png",
           t_secondPlace: "Virtus.pro",
           t_secondPlaceLogo: "Virtus_Pro.png",
           t_thirdPlace: "PSG.LGD",
