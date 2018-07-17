@@ -16,7 +16,7 @@
                     <span class="pageTitle dpc points descricao">12372 points</span>
                     <br>
                     <span class="text-silver descricao">Pro circuit rank:</span>
-                    <span class="text-money rank">#1</span>
+                    <span class="text-money dpc_rank">#1</span>
                 </div>
             </div>
         </div>
@@ -28,8 +28,8 @@
                     <div class="player_portrait">
                         <img class="team_page_player_img" v-bind:src="require('../assets/Players/virtus.pro/ramzes.png')">
                         <div class="player_name_portrait">
-                            <span class="pageTitle">
-                                <img v-bind:src="require('../assets/Countries/Ru.png')"> Ramzes666</span>
+                            <span>
+                                <img v-bind:src="require('../assets/Countries/Ru.png')"> <a class="pageTitle" href="#/player">Ramzes666</a></span>
                         </div>
                     </div>
                     
@@ -37,7 +37,7 @@
                         <img class="team_page_player_img " v-bind:src="require('../assets/Players/virtus.pro/noone.png')">
                         <div class="player_name_portrait">
                             <span class="pageTitle">
-                                <img v-bind:src="require('../assets/Countries/Ua.png')"> No[o]one</span>
+                                <img v-bind:src="require('../assets/Countries/Ua.png')"> <a class="pageTitle" href="#/player">No[o]one</a></span>
                         </div>
                     </div>
 
@@ -45,7 +45,7 @@
                         <img class="team_page_player_img " v-bind:src="require('../assets/Players/virtus.pro/9pasha.png')">
                         <div class="player_name_portrait">
                             <span class="pageTitle">
-                                <img v-bind:src="require('../assets/Countries/Ru.png')"> 9pasha</span>
+                                <img v-bind:src="require('../assets/Countries/Ru.png')"><a class="pageTitle" href="#/player"> 9pasha</a></span>
                         </div>
                     </div>
 
@@ -53,7 +53,7 @@
                         <img class="team_page_player_img " v-bind:src="require('../assets/Players/virtus.pro/rodjer.png')">
                         <div class="player_name_portrait">
                             <span class="pageTitle">
-                                <img v-bind:src="require('../assets/Countries/Ua.png')"> Rodjer</span>
+                                <img v-bind:src="require('../assets/Countries/Ua.png')"><a class="pageTitle" href="#/player"> Rodjer</a></span>
                         </div>
                     </div>
 
@@ -61,7 +61,7 @@
                         <img class="team_page_player_img " v-bind:src="require('../assets/Players/virtus.pro/solo.png')">
                         <div class="player_name_portrait">
                             <span class="pageTitle">
-                                <img v-bind:src="require('../assets/Countries/Ru.png')"> Solo</span>
+                                <img v-bind:src="require('../assets/Countries/Ru.png')"><a class="pageTitle" href="#/player"> Solo</a></span>
                         </div>
                     </div>
                 </div>

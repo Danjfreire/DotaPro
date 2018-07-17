@@ -1,5 +1,5 @@
 <template>
-<body>
+<body class="img-responsive">
     <Navbar></Navbar>
     <router-view/>
 </body>

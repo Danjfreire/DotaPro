@@ -7980,7 +7980,9 @@ a.text-kda:hover, a.text-kda:focus {
 
 body {
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-size: 150% 150%;
+  padding-top: 40px; }
 
 .pageTitle {
   color: #ffc400; }
@@ -7988,7 +7990,7 @@ body {
 .descricao {
   font-size: 20px; }
 
-.rank {
+.dpc_rank {
   font-size: 30px; }
 
 .social_media_icon {
@@ -8037,7 +8039,7 @@ body {
   margin: 15px; }
 
 .player_page_name {
-  font-size: 20px; }
+  font-size: 25px; }
 
 .team_page_player_img {
   width: 125px;
