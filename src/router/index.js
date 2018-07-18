@@ -6,6 +6,7 @@ import TournamentInfo from '@/components/TournamentInfo'
 import TeamPage from '@/components/TeamPage'
 import Players from '@/components/Players'
 import PlayerPage from '@/components/PlayerPage'
+import Match from '@/components/Match'
 
 Vue.use(Router)
 
@@ -33,13 +34,18 @@ export default new Router({
     },
     {
       path: '/players',
-      name: 'Player',
+      name: 'Players',
       component: Players
     },
     {
       path: '/player',
-      name: 'Playe',
+      name: 'Player',
       component: PlayerPage
+    },
+    {
+      path: '/match',
+      name: 'Match',
+      component: Match
     }  
   ]
 })

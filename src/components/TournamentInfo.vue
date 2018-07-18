@@ -43,7 +43,7 @@
     </div>
     
     <TournamentStandings v-bind:standings="standings"></TournamentStandings>
-    <Matches></Matches>
+    <TournamentMatches></TournamentMatches>
     <Meta></Meta>
     
 </div>
@@ -51,7 +51,7 @@
 
 <script>
 import TournamentStandings from "./TournamentStandings.vue";
-import Matches from "./Matches.vue";
+import TournamentMatches from "./TournamentMatches.vue";
 import Meta from "./Meta.vue";
 
 export default {
@@ -59,7 +59,7 @@ export default {
   props: ["tournament"],
   components: {
     TournamentStandings,
-    Matches,
+    TournamentMatches,
     Meta
   },
   data() {

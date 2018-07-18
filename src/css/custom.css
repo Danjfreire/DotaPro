@@ -42,6 +42,8 @@
   --gpm: #FBB829;
   --xpm: #76B8A6;
   --kda: #DD9E10;
+  --radiant: rgba(50, 61, 54, 0.5);
+  --dire: rgba(77, 25, 25, 0.6);
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -1467,6 +1469,28 @@ pre {
   .table-hover .table-kda:hover > th {
     background-color: #f2dba6; }
 
+.table-radiant,
+.table-radiant > th,
+.table-radiant > td {
+  background-color: rgba(231, 233, 232, 0.86); }
+
+.table-hover .table-radiant:hover {
+  background-color: rgba(218, 221, 219, 0.86); }
+  .table-hover .table-radiant:hover > td,
+  .table-hover .table-radiant:hover > th {
+    background-color: rgba(218, 221, 219, 0.86); }
+
+.table-dire,
+.table-dire > th,
+.table-dire > td {
+  background-color: rgba(230, 222, 222, 0.888); }
+
+.table-hover .table-dire:hover {
+  background-color: rgba(219, 207, 207, 0.888); }
+  .table-hover .table-dire:hover > td,
+  .table-hover .table-dire:hover > th {
+    background-color: rgba(219, 207, 207, 0.888); }
+
 .table-active,
 .table-active > th,
 .table-active > td {
@@ -2353,6 +2377,48 @@ fieldset:disabled a.btn {
     .btn-kda:not(:disabled):not(.disabled):active:focus, .btn-kda:not(:disabled):not(.disabled).active:focus, .show > .btn-kda.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(221, 158, 16, 0.5); }
 
+.btn-radiant {
+  color: #fff;
+  background-color: rgba(50, 61, 54, 0.5);
+  border-color: rgba(50, 61, 54, 0.5); }
+  .btn-radiant:hover {
+    color: #fff;
+    background-color: rgba(33, 40, 35, 0.5);
+    border-color: rgba(27, 33, 29, 0.5); }
+  .btn-radiant:focus, .btn-radiant.focus {
+    box-shadow: 0 0 0 0.2rem rgba(50, 61, 54, 0.5); }
+  .btn-radiant.disabled, .btn-radiant:disabled {
+    color: #fff;
+    background-color: rgba(50, 61, 54, 0.5);
+    border-color: rgba(50, 61, 54, 0.5); }
+  .btn-radiant:not(:disabled):not(.disabled):active, .btn-radiant:not(:disabled):not(.disabled).active, .show > .btn-radiant.dropdown-toggle {
+    color: #fff;
+    background-color: rgba(27, 33, 29, 0.5);
+    border-color: rgba(21, 26, 23, 0.5); }
+    .btn-radiant:not(:disabled):not(.disabled):active:focus, .btn-radiant:not(:disabled):not(.disabled).active:focus, .show > .btn-radiant.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(50, 61, 54, 0.5); }
+
+.btn-dire {
+  color: #fff;
+  background-color: rgba(77, 25, 25, 0.6);
+  border-color: rgba(77, 25, 25, 0.6); }
+  .btn-dire:hover {
+    color: #fff;
+    background-color: rgba(48, 16, 16, 0.6);
+    border-color: rgba(39, 13, 13, 0.6); }
+  .btn-dire:focus, .btn-dire.focus {
+    box-shadow: 0 0 0 0.2rem rgba(77, 25, 25, 0.5); }
+  .btn-dire.disabled, .btn-dire:disabled {
+    color: #fff;
+    background-color: rgba(77, 25, 25, 0.6);
+    border-color: rgba(77, 25, 25, 0.6); }
+  .btn-dire:not(:disabled):not(.disabled):active, .btn-dire:not(:disabled):not(.disabled).active, .show > .btn-dire.dropdown-toggle {
+    color: #fff;
+    background-color: rgba(39, 13, 13, 0.6);
+    border-color: rgba(29, 9, 9, 0.6); }
+    .btn-dire:not(:disabled):not(.disabled):active:focus, .btn-dire:not(:disabled):not(.disabled).active:focus, .show > .btn-dire.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(77, 25, 25, 0.5); }
+
 .btn-outline-primary {
   color: #007bff;
   background-color: transparent;
@@ -2772,6 +2838,48 @@ fieldset:disabled a.btn {
     border-color: #DD9E10; }
     .btn-outline-kda:not(:disabled):not(.disabled):active:focus, .btn-outline-kda:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-kda.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(221, 158, 16, 0.5); }
+
+.btn-outline-radiant {
+  color: rgba(50, 61, 54, 0.5);
+  background-color: transparent;
+  background-image: none;
+  border-color: rgba(50, 61, 54, 0.5); }
+  .btn-outline-radiant:hover {
+    color: #fff;
+    background-color: rgba(50, 61, 54, 0.5);
+    border-color: rgba(50, 61, 54, 0.5); }
+  .btn-outline-radiant:focus, .btn-outline-radiant.focus {
+    box-shadow: 0 0 0 0.2rem rgba(50, 61, 54, 0.5); }
+  .btn-outline-radiant.disabled, .btn-outline-radiant:disabled {
+    color: rgba(50, 61, 54, 0.5);
+    background-color: transparent; }
+  .btn-outline-radiant:not(:disabled):not(.disabled):active, .btn-outline-radiant:not(:disabled):not(.disabled).active, .show > .btn-outline-radiant.dropdown-toggle {
+    color: #fff;
+    background-color: rgba(50, 61, 54, 0.5);
+    border-color: rgba(50, 61, 54, 0.5); }
+    .btn-outline-radiant:not(:disabled):not(.disabled):active:focus, .btn-outline-radiant:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-radiant.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(50, 61, 54, 0.5); }
+
+.btn-outline-dire {
+  color: rgba(77, 25, 25, 0.6);
+  background-color: transparent;
+  background-image: none;
+  border-color: rgba(77, 25, 25, 0.6); }
+  .btn-outline-dire:hover {
+    color: #fff;
+    background-color: rgba(77, 25, 25, 0.6);
+    border-color: rgba(77, 25, 25, 0.6); }
+  .btn-outline-dire:focus, .btn-outline-dire.focus {
+    box-shadow: 0 0 0 0.2rem rgba(77, 25, 25, 0.5); }
+  .btn-outline-dire.disabled, .btn-outline-dire:disabled {
+    color: rgba(77, 25, 25, 0.6);
+    background-color: transparent; }
+  .btn-outline-dire:not(:disabled):not(.disabled):active, .btn-outline-dire:not(:disabled):not(.disabled).active, .show > .btn-outline-dire.dropdown-toggle {
+    color: #fff;
+    background-color: rgba(77, 25, 25, 0.6);
+    border-color: rgba(77, 25, 25, 0.6); }
+    .btn-outline-dire:not(:disabled):not(.disabled):active:focus, .btn-outline-dire:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-dire.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(77, 25, 25, 0.5); }
 
 .btn-link {
   font-weight: 400;
@@ -4223,6 +4331,22 @@ input[type="button"].btn-block {
     text-decoration: none;
     background-color: #ad7c0d; }
 
+.badge-radiant {
+  color: #fff;
+  background-color: rgba(50, 61, 54, 0.5); }
+  .badge-radiant[href]:hover, .badge-radiant[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(27, 33, 29, 0.5); }
+
+.badge-dire {
+  color: #fff;
+  background-color: rgba(77, 25, 25, 0.6); }
+  .badge-dire[href]:hover, .badge-dire[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(39, 13, 13, 0.6); }
+
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
@@ -4438,6 +4562,24 @@ input[type="button"].btn-block {
     border-top-color: #f2dba6; }
   .alert-kda .alert-link {
     color: #433005; }
+
+.alert-radiant {
+  color: rgba(13, 16, 14, 0.74);
+  background-color: rgba(239, 240, 240, 0.9);
+  border-color: rgba(231, 233, 232, 0.86); }
+  .alert-radiant hr {
+    border-top-color: rgba(218, 221, 219, 0.86); }
+  .alert-radiant .alert-link {
+    color: rgba(0, 0, 0, 0.74); }
+
+.alert-dire {
+  color: rgba(24, 8, 8, 0.792);
+  background-color: rgba(238, 233, 233, 0.92);
+  border-color: rgba(230, 222, 222, 0.888); }
+  .alert-dire hr {
+    border-top-color: rgba(219, 207, 207, 0.888); }
+  .alert-dire .alert-link {
+    color: rgba(0, 0, 0, 0.792); }
 
 @keyframes progress-bar-stripes {
   from {
@@ -4751,6 +4893,28 @@ input[type="button"].btn-block {
     color: #fff;
     background-color: #735208;
     border-color: #735208; }
+
+.list-group-item-radiant {
+  color: rgba(13, 16, 14, 0.74);
+  background-color: rgba(231, 233, 232, 0.86); }
+  .list-group-item-radiant.list-group-item-action:hover, .list-group-item-radiant.list-group-item-action:focus {
+    color: rgba(13, 16, 14, 0.74);
+    background-color: rgba(218, 221, 219, 0.86); }
+  .list-group-item-radiant.list-group-item-action.active {
+    color: #fff;
+    background-color: rgba(13, 16, 14, 0.74);
+    border-color: rgba(13, 16, 14, 0.74); }
+
+.list-group-item-dire {
+  color: rgba(24, 8, 8, 0.792);
+  background-color: rgba(230, 222, 222, 0.888); }
+  .list-group-item-dire.list-group-item-action:hover, .list-group-item-dire.list-group-item-action:focus {
+    color: rgba(24, 8, 8, 0.792);
+    background-color: rgba(219, 207, 207, 0.888); }
+  .list-group-item-dire.list-group-item-action.active {
+    color: #fff;
+    background-color: rgba(24, 8, 8, 0.792);
+    border-color: rgba(24, 8, 8, 0.792); }
 
 .close {
   float: right;
@@ -5451,6 +5615,22 @@ button.bg-kda:hover,
 button.bg-kda:focus {
   background-color: #ad7c0d !important; }
 
+.bg-radiant {
+  background-color: rgba(50, 61, 54, 0.5) !important; }
+
+a.bg-radiant:hover, a.bg-radiant:focus,
+button.bg-radiant:hover,
+button.bg-radiant:focus {
+  background-color: rgba(27, 33, 29, 0.5) !important; }
+
+.bg-dire {
+  background-color: rgba(77, 25, 25, 0.6) !important; }
+
+a.bg-dire:hover, a.bg-dire:focus,
+button.bg-dire:hover,
+button.bg-dire:focus {
+  background-color: rgba(39, 13, 13, 0.6) !important; }
+
 .bg-white {
   background-color: #fff !important; }
 
@@ -5546,6 +5726,12 @@ button.bg-kda:focus {
 
 .border-kda {
   border-color: #DD9E10 !important; }
+
+.border-radiant {
+  border-color: rgba(50, 61, 54, 0.5) !important; }
+
+.border-dire {
+  border-color: rgba(77, 25, 25, 0.6) !important; }
 
 .border-white {
   border-color: #fff !important; }
@@ -7870,6 +8056,18 @@ a.text-xpm:hover, a.text-xpm:focus {
 a.text-kda:hover, a.text-kda:focus {
   color: #ad7c0d !important; }
 
+.text-radiant {
+  color: rgba(50, 61, 54, 0.5) !important; }
+
+a.text-radiant:hover, a.text-radiant:focus {
+  color: rgba(27, 33, 29, 0.5) !important; }
+
+.text-dire {
+  color: rgba(77, 25, 25, 0.6) !important; }
+
+a.text-dire:hover, a.text-dire:focus {
+  color: rgba(39, 13, 13, 0.6) !important; }
+
 .text-body {
   color: #212529 !important; }
 
@@ -7968,11 +8166,41 @@ a.text-kda:hover, a.text-kda:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+@media (min-width: 768px) {
+  .container-small {
+    width: 300px; }
+
+  .container-large {
+    width: 970px; } }
+@media (min-width: 992px) {
+  .container-small {
+    width: 500px; }
+
+  .container-large {
+    width: 1170px; } }
+@media (min-width: 1200px) {
+  .container-small {
+    width: 900px; }
+
+  .container-large {
+    width: 1500px; } }
+.container-small, .container-large {
+  max-width: 100%; }
+
 .card-body {
   padding: 10px; }
 
 .pageTitle {
   color: #C29612; }
+
+.background_transparente {
+  filter: alpha(opacity=70); }
+
+.tournament_img_mini {
+  width: 66px;
+  height: auto;
+  margin: 0px;
+  padding: 0%; }
 
 .transparente {
   background-color: rgba(0, 0, 0, 0.2);
@@ -7980,8 +8208,7 @@ a.text-kda:hover, a.text-kda:focus {
 
 body {
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 150% 150%;
+  background-size: 100% 100%;
   padding-top: 40px; }
 
 .pageTitle {
@@ -7999,7 +8226,6 @@ body {
   margin: 2px; }
 
 .player_stats_desc {
-  font-size: 15px;
   margin-top: 2px;
   color: rgba(255, 255, 255, 0.5); }
 
@@ -8020,6 +8246,10 @@ body {
 .rank_img {
   width: 100px;
   height: auto; }
+
+.player_img_mini {
+  height: 50px;
+  width: auto; }
 
 .player_portrait {
   margin-left: 47px;
@@ -8076,6 +8306,10 @@ body {
   width: 50px;
   height: auto; }
 
+.hero_pick2 {
+  width: 65px;
+  height: auto; }
+
 .hero_ban {
   width: 45px;
   height: auto;
@@ -8083,6 +8317,11 @@ body {
   filter: alpha(opacity=40);
   /* msie */
   margin: 5px; }
+
+.item {
+  width: 45px;
+  height: auto;
+  margin: 1px; }
 
 .celula {
   vertical-align: middle;

@@ -3,7 +3,7 @@
         <div class="card bg-dark2">
             <div class="row">
                 <img class="player_page_img img-responsive" v-bind:src="require('../assets/Players/virtus.pro/ramzes.png')">
-                <div class="card-block col-xl-4">
+                <div class="card-block col-md-4">
                     <span class="player_page_name pageTitle">
                         <img class="team_img_mini2" v-bind:src="require('../assets/Teams/Virtus_Pro.png')">
                         Ramzes666</span>
@@ -15,8 +15,8 @@
                     <a href="https://twitter.com/ramzesdoto"> <img class="social_media_icon" src="../assets/Icons/twitter.png"></a>
                     <a href="https://www.twitch.tv/ramzesdoto"> <img class="social_media_icon" src="../assets/Icons/twitch.png"></a>
                 </div>
-                <div class="card-block col-xl-6 row">
-                    <div class="col-xl-3">
+                <div class="card-block col-md-6 row">
+                    <div class="col-md-3">
                         <span class="player_stats_desc ">DPC POINTS</span>
                         <br>
                         <span class="text-silver">4124</span>
@@ -25,7 +25,7 @@
                         <br>
                         <span class="text-silver">2 hours ago</span>
                     </div>
-                    <div class="col-xl-3">
+                    <div class="col-md-3">
                        <span class="player_stats_desc">RECORD</span>
                        <br>
                        <span class="text-money">2605</span>
@@ -36,7 +36,7 @@
                        <br>
                        <span class="text-money">59.48%</span>
                     </div>
-                    <div class="col-xl-3">
+                    <div class="col-md-3">
                         <span class="player_stats_desc ">SOLO MMR</span>
                         <br>
                         <span class="text-silver">8095</span>
@@ -49,7 +49,7 @@
                         <div class="rank_container text-center">
                             <img class="rank_img" src="../assets/rank-icons/season_top10.png">
                             <div class="rank">
-                                <span class="rank_text text-silver">8</span>
+                                <span class="rank_text text-silver">4</span>
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
 
         <section>
             <div class="row">
-                <div class="col-xl-8">
+                <div class="col-md-8">
                     <h5 class="pageTitle">Most Played Heroes</h5>
                     <table class="table table-striped table-dark">
                         <thead>
@@ -94,43 +94,86 @@
                             </tr>
                         </tbody>
                     </table>
+                    <br>
+                    <h5 class="pageTitle">Recent Matches</h5>
+                    <table class="table table-striped table-dark">
+                        <thead>
+                            <th>Hero</th>
+                            <th>Result</th>
+                            <th>Game Mode</th>
+                            <th>Duration</th>
+                            <th>KDA</th>
+                        </thead>
+                        <tbody class="bg-dark2">
+                            <tr v-for="i in 5">
+                                <td>
+                                    <img class ="hero_pick" v-bind:src="require('../assets/Hero-icons/alchemist_full.png')">
+                                    <span class="text-silver">Alchemist</span>
+                                </td>
+                                <td>
+                                    <span class="text-money">Victory</span>
+                                </td>
+                                <td>
+                                    <span class="text-silver">Ranked Solo</span>
+                                </td>
+                                <td>
+                                    <span class="text-kda">4.24</span>
+                                </td>
+                                <td>
+                                    <span class="text-money">20</span>
+                                    <span class="text-silver">/</span>
+                                    <span class="text-red">2</span>
+                                    <span class="text-silver">/</span>
+                                    <span class="text-silver">8</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="col-xl-4">
+                <div class="col-md-4 bg-dark2">
                     <h5 class="pageTitle">Stats</h5>
-                    <ul class="list-group">
-                        <li class="list-group-item bg-dark2 border-money">
+                    <ul class="list-group list-group-striped">
+                        <li class="list-group-item bg-dark2 border-silver">
                             <span class="text-silver">Most played role</span>
                             <span class="text-silver float_right">Core</span>
                         </li>
-                        <li class="list-group-item bg-dark2 border-money">
+                        <li class="list-group-item bg-dark2 border-silver">
                             <span class="text-silver">Most played lane</span>
                             <span class="text-silver float_right">Safe Lane</span>
                         </li>
                         
-                        <li class="list-group-item bg-dark2 border-money">
+                        <li class="list-group-item bg-dark2 border-silver">
                             <span class="text-silver">KDA Ratio</span>
                             <span class="text-kda float_right">4.25</span>
                         </li>
-                        <li class="list-group-item bg-dark2 border-money">
+                        <li class="list-group-item bg-dark2 border-silver" >
                             <span class="text-silver">XPM</span>
                             <span class="text-xpm float_right">678</span>
                         </li>
-                        <li class="list-group-item bg-dark2 border-money">
+                        <li class="list-group-item bg-dark2 border-silver">
                             <span class="text-silver">GPM</span>
                             <span class="text-gpm float_right">710</span>
                         </li>
-                        <li class="list-group-item bg-dark2 border-money">
+                        <li class="list-group-item bg-dark2 border-silver">
                             <span class="text-silver">Matches</span>
                             <span class="text-silver float_right">5805</span>
                         </li>
-                        <li class="list-group-item bg-dark2 border-money">
+                        <li class="list-group-item bg-dark2 border-silver">
                             <span class="text-silver">Win Rate</span>
                             <span class="text-silver float_right">60.61%</span>
                         </li>
                     </ul>
                     <br>
-                    <h5 class="pageTitle">Latest Tournaments</h5>
-
+                    <h5 class="pageTitle">Recent Tournaments</h5>
+                        <ul class="list-group">
+                        <li class="list-group-item bg-dark2 border-silver" v-for="i in 5">
+                            <img class="tournament_img_mini" src="../assets/Tournaments/rsz_china_super_major.jpg">
+                            <a class="text-silver">China Dota2 Super Major  </a>
+                            <span class="text-red float-right">9</span>
+                            <span class="text-silver float-right">-</span>
+                            <span class="text-money float-right">14</span>
+                        </li>
+                        </ul>
                 </div>
             </div>
         </section>

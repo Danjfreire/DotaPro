@@ -10,6 +10,9 @@ $red:     #C23C2A !default;
 $gpm:     #FBB829 !default;
 $xpm:     #76B8A6 !default;
 $kda:     #DD9E10 !default;
+$radiant: rgba(50, 61, 54, 0.5) !default;
+$dire:    rgba(77, 25, 25, 0.6) !default;
+
 
 $theme-colors:(
     "dark2":      $dark2,
@@ -23,7 +26,9 @@ $theme-colors:(
     "golden":     $golden,
     "gpm":        $gpm,
     "xpm":        $xpm,
-    "kda":        $kda
+    "kda":        $kda,
+    "radiant":    $radiant,
+    "dire":       $dire
     );
 
 .card{
@@ -33,11 +38,51 @@ $theme-colors:(
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+@media (min-width: 768px) {
+    .container-small {
+        width: 300px;
+    }
+    .container-large {
+        width: 970px;
+    } 
+} 
+@media (min-width: 992px) {
+    .container-small {
+        width: 500px;
+    }
+    .container-large {
+        width: 1170px;
+    } 
+} 
+@media (min-width: 1200px) {
+    .container-small {
+        width: 900px;
+    }
+    .container-large {
+        width: 1500px;
+    } 
+}
+
+.container-small, .container-large {
+    max-width: 100%;
+}
+
 .card-body{
     padding: 10px;
 }
 .pageTitle{
      color: $golden;
+}
+
+.background_transparente{
+    filter: alpha(opacity=70);
+}
+
+.tournament_img_mini{
+    width: 66px;
+    height: auto;
+    margin: 0px;
+    padding: 0%;
 }
 
 .transparente{
@@ -47,8 +92,7 @@ $theme-colors:(
 
 body{
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 150% 150%;
+    background-size: 100% 100%;
     padding-top: 40px;
 }
 
@@ -70,7 +114,6 @@ body{
 }
 
 .player_stats_desc{
-    font-size: 15px;
     margin-top: 2px;
     color:rgba(255,255,255,0.5);
 }
@@ -95,6 +138,11 @@ body{
 .rank_img{
     width: 100px;
     height: auto;
+}
+
+.player_img_mini{
+    height: 50px;
+    width: auto;
 }
 
 .player_portrait{
@@ -163,12 +211,23 @@ body{
     height: auto;
 }
 
+.hero_pick2{
+    width:65px;
+    height: auto;
+}
+
 .hero_ban{
     width:45px;
     height: auto;
     opacity: 0.4;
     filter: alpha(opacity=40); /* msie */
     margin: 5px;
+}
+
+.item{
+    width: 45px;
+    height: auto;
+    margin: 1px;
 }
   
 .celula{

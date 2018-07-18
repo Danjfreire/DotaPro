@@ -1,7 +1,7 @@
 <template>
-<body class="img-responsive">
-    <Navbar></Navbar>
-    <router-view/>
+<body class="background_transparente">
+      <Navbar></Navbar>
+      <router-view/>  
 </body>
 </template>
 
