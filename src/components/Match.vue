@@ -3,7 +3,7 @@
     <div class="card bg-dark2">    
         <div class="card-body ">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-7">
                 <h3 class="text-silver">China Dota2 Super Major</h3>
                 <span class="pageTitle">Match 3943547236</span>
                 </div>

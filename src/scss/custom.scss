@@ -63,6 +63,10 @@ $theme-colors:(
     } 
 }
 
+.my_font{
+   font-size: 0.8em; 
+}
+
 .container-small, .container-large {
     max-width: 100%;
 }
@@ -116,6 +120,7 @@ body{
 .player_stats_desc{
     margin-top: 2px;
     color:rgba(255,255,255,0.5);
+    font-size: 0.7em;
 }
 
 .rank_container{
@@ -124,19 +129,19 @@ body{
 
 .rank{
     position: absolute;
-    top: 56%;
+    top: 75%;
     left: 0;
     width: 100%;
 }
 
 .rank_text{
-    font-size: 22px;
+    font-size: 1.0em;
     font-weight: bold;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .rank_img{
-    width: 100px;
+    width: 5.5em;
     height: auto;
 }
 
@@ -160,13 +165,13 @@ body{
 }
 
 .player_page_img{
-    width: 100px;
+    width: 5.5em;
     height: auto;
     margin: 15px;
 }
 
 .player_page_name{
-    font-size: 25px;
+    font-size: 1.2em;
 }
 
 .team_page_player_img{

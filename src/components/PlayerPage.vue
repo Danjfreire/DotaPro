@@ -2,7 +2,7 @@
     <div class="container transparente">
         <div class="card bg-dark2">
             <div class="row">
-                <img class="player_page_img img-responsive" v-bind:src="require('../assets/Players/virtus.pro/ramzes.png')">
+                <img class="player_page_img" v-bind:src="require('../assets/Players/virtus.pro/ramzes.png')">
                 <div class="card-block col-md-4">
                     <span class="player_page_name pageTitle">
                         <img class="team_img_mini2" v-bind:src="require('../assets/Teams/Virtus_Pro.png')">
@@ -17,9 +17,9 @@
                 </div>
                 <div class="card-block col-md-6 row">
                     <div class="col-md-3">
-                        <span class="player_stats_desc ">DPC POINTS</span>
+                        <span class="player_stats_desc">DPC POINTS</span>
                         <br>
-                        <span class="text-silver">4124</span>
+                        <span class="text-silver my_font">4124</span>
                         <br>
                         <span class="player_stats_desc ">LAST MATCH</span>
                         <br>
@@ -63,33 +63,33 @@
                     <h5 class="pageTitle">Most Played Heroes</h5>
                     <table class="table table-striped table-dark">
                         <thead>
-                            <th>Hero</th>
-                            <th>Matches</th>
-                            <th>Win %</th>
-                            <th>KDA</th>
-                            <th>GPM</th>
-                            <th>XPM</th>
+                            <th class="my_font">Hero</th>
+                            <th class="my_font">Matches</th>
+                            <th class="my_font">Win %</th>
+                            <th class="my_font">KDA</th>
+                            <th class="my_font">GPM</th>
+                            <th class="my_font">XPM</th>
                         </thead>
                         <tbody class="bg-dark2">
                             <tr v-for="i in 5">
                                 <td>
                                     <img class ="hero_pick" v-bind:src="require('../assets/Hero-icons/alchemist_full.png')">
-                                    <span class="text-silver">Alchemist</span>
+                                    <span class="text-silver my_font">Alchemist</span>
                                 </td>
                                 <td>
-                                    <span class="text-silver">150</span>
+                                    <span class="text-silver my_font">150</span>
                                 </td>
                                 <td>
-                                    <span class="text-money">58.22%</span>
+                                    <span class="text-money my_font">58.22%</span>
                                 </td>
                                 <td>
-                                    <span class="text-kda">4.24</span>
+                                    <span class="text-kda my_font">4.24</span>
                                 </td>
                                 <td>
-                                    <span class="text-gpm">892</span>
+                                    <span class="text-gpm my_font">892</span>
                                 </td>
                                 <td>
-                                    <span class="text-xpm">723</span>
+                                    <span class="text-xpm my_font">723</span>
                                 </td>
                             </tr>
                         </tbody>
@@ -169,6 +169,7 @@
                         <li class="list-group-item bg-dark2 border-silver" v-for="i in 5">
                             <img class="tournament_img_mini" src="../assets/Tournaments/rsz_china_super_major.jpg">
                             <a class="text-silver">China Dota2 Super Major  </a>
+                            <br>
                             <span class="text-red float-right">9</span>
                             <span class="text-silver float-right">-</span>
                             <span class="text-money float-right">14</span>
