@@ -1,5 +1,5 @@
 <template>
-    <div class="container transparente">
+    <div class="container container-small transparente">
         <h1 class="pageTitle text-center">Teams</h1>
         <br>
         <br>
@@ -13,11 +13,11 @@
             <div class="col-xl-12">
                 <table class="table table-striped table-dark">
                     <thead>
-                        <th class="text-silver transparente col-xl-3">Team</th>
-                        <th class="text-silver transparente col-xl-3">Region</th>
-                        <th class="text-silver transparente col-xl-2">Win %</th>
-                        <th class="text-silver transparente col-xl-2">KDA</th>
-                        <th class="text-silver transparente col-xl-2">DPC Rank</th>
+                        <th class="text-silver transparente col-xl-3 my_font">Team</th>
+                        <th class="text-silver transparente col-xl-3 my_font">Region</th>
+                        <th class="text-silver transparente col-xl-2 my_font">Win %</th>
+                        <th class="text-silver transparente col-xl-2 my_font">KDA</th>
+                        <th class="text-silver transparente col-xl-2 my_font">DPC Rank</th>
                     </thead>
                     <tbody class="bg-dark2">
                         <tr v-for="team in teams">
@@ -25,16 +25,16 @@
                                   <img class="team_img_mini3" v-bind:src="require('../assets/Teams/'+ team.logo)"> 
                                   <a class ="pageTitle" href="#/team">{{team.name}}</a>
                             </td>
-                            <td class="text-silver align-middle">
+                            <td class="text-silver align-middle my_font">
                                  CIS
                             </td>
-                            <td class="text-money align-middle">
+                            <td class="text-money align-middle my_font">
                                 <span>61.45%</span>
                             </td>
-                            <td class="text-kda align-middle">
+                            <td class="text-kda align-middle my_font">
                                 <span>3.52</span>
                             </td>
-                            <td class="text-money align-middle">
+                            <td class="text-money align-middle my_font">
                                 <span>#1</span>
                             </td>
                         </tr>

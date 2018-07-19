@@ -8180,12 +8180,12 @@ a.text-dire:hover, a.text-dire:focus {
     width: 1170px; } }
 @media (min-width: 1200px) {
   .container-small {
-    width: 900px; }
+    width: 1000px; }
 
   .container-large {
     width: 1500px; } }
 .my_font {
-  font-size: 0.8em; }
+  font-size: 0.9em; }
 
 .container-small, .container-large {
   max-width: 100%; }
@@ -8218,7 +8218,7 @@ body {
   color: #ffc400; }
 
 .descricao {
-  font-size: 20px; }
+  font-size: 1.1em; }
 
 .dpc_rank {
   font-size: 30px; }
@@ -8248,8 +8248,9 @@ body {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
 
 .rank_img {
-  width: 5.5em;
-  height: auto; }
+  width: 4.5em;
+  height: auto;
+  margin-top: 1.2em; }
 
 .player_img_mini {
   height: 50px;
@@ -8270,7 +8271,8 @@ body {
 .player_page_img {
   width: 5.5em;
   height: auto;
-  margin: 15px; }
+  margin: 15px;
+  margin-right: 2px; }
 
 .player_page_name {
   font-size: 1.2em; }

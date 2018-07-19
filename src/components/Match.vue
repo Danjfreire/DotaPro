@@ -1,5 +1,5 @@
 <template>
-<div class="container transparente">
+<div class="container container-small transparente">
     <div class="card bg-dark2">    
         <div class="card-body ">
             <div class="row">

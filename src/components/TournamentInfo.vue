@@ -1,17 +1,19 @@
 <template>
-<div class="container transparente">
+<div class="container container-small transparente">
     <div class="card bg-dark2 ">
         <div class="row">
             <div class="col-xl-4">
                 <img v-bind:src="require('../assets/Tournaments/rsz_china_super_major.jpg')" class="w-100">
             </div>
              <div class="card-block col-xl-4 px-3">
-                <h3 class="card-title pageTitle">China Dota2 Super Major</h3>
+                <h4 class="card-title pageTitle">China Dota2 Super Major</h4>
                     <span class="card-text text-red descricao">Major</span>
                     <br>
-                    <span class="card-text text-silver">2018-06-02 | 2018-06-10</span>
+                    <span class="card-text text-silver my_font descricao" >China  <img v-bind:src="require('../assets/Regions/Cn.png')"></span>
                     <br>
-                    <span class="card-text text-silver">$1,500,000 - 2250 DPC Points</span>
+                    <span class="card-text text-silver my_font">2018-06-02 | 2018-06-10</span>
+                    <br>
+                    <span class="card-text text-silver my_font">$1,500,000 - 2250 DPC Points</span>
             </div>
             <div class="card-block px-3">
                 <br>

@@ -6,12 +6,14 @@
               <img v-bind:src="require('../assets/Tournaments/'+ campeonato.t_logo)" class="w-100">
             </div>
             <div class="card-block col-md-4 px-3">
-              <h3><a class="pageTitle" href="#/tournament">{{campeonato.t_name}}</a></h3>
+              <h4><a class="pageTitle" href="#/tournament">{{campeonato.t_name}}</a></h4>
               <span class="card-text text-red descricao" >{{campeonato.t_tier}}</span>
               <br>
-              <span class="card-text text-silver">{{campeonato.t_startDate}} | {{campeonato.t_endDate}}</span>
+              <span class="card-text text-silver my_font descricao" >China  <img v-bind:src="require('../assets/Regions/Cn.png')"></span>
               <br>
-              <span class="card-text text-silver">{{campeonato.t_prizePool}} - {{campeonato.t_dpcPoints}} DPC Points</span>
+              <span class="card-text text-silver my_font">{{campeonato.t_startDate}} | {{campeonato.t_endDate}}</span>
+              <br>
+              <span class="card-text text-silver my_font">{{campeonato.t_prizePool}} - {{campeonato.t_dpcPoints}} DPC Points</span>
             </div>
             <div class="card-block px-3">
               <br>

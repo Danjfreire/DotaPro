@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-    <div class="container">
+    <div class="container container-small">
         <img class="navbar-brand mb-0 pt-0 pb-0" src="../assets/Backgrounds/DotaProLogo.png">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
             <span class="navbar-toggler-icon"></span>

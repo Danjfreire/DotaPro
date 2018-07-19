@@ -1,5 +1,5 @@
 <template>
-    <div class="container transparente">
+    <div class="container container-small transparente">
         <h1 class="pageTitle text-center">Players</h1>
         <section>
             <div class="row">
