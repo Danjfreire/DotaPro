@@ -59,7 +59,7 @@ $theme-colors:(
         width: 1000px;
     }
     .container-large {
-        width: 1500px;
+        width: 1200px;
     } 
 }
 
@@ -92,12 +92,6 @@ $theme-colors:(
 .transparente{
     background-color: rgba($color: #000000, $alpha: 0.2 );
     margin-top: 10px;
-}
-
-body{
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding-top: 40px;
 }
 
 .pageTitle {
@@ -147,19 +141,19 @@ body{
 }
 
 .player_img_mini{
-    height: 50px;
+    height: 35px;
     width: auto;
 }
 
 .player_portrait{
-    margin-left: 47px;
+    margin-left: 37px;
     margin-top: 5px;
     margin-bottom: 10px;
-    margin-right: 47px;
+    margin-right: 37px;
 }
 
 .player_name_portrait{
-    width: 125px;
+    width: 6.0em;
     margin-top: 0px;
     text-align: center;
     background-color: rgba($color: #000000, $alpha: 0.5 );
@@ -177,14 +171,15 @@ body{
 }
 
 .team_page_player_img{
-    width: 125px;
+    width: 6.0em;
     height: auto;
 }
 
 .team_page_img{
-    width: 85px;
+    width: 4.5em;
     height: auto;
     margin: 5px;
+    margin-right: 10px;
 }
     
 .team_img_mini{
@@ -219,7 +214,7 @@ body{
 }
 
 .hero_pick2{
-    width:65px;
+    width:45px;
     height: auto;
 }
 
@@ -228,13 +223,22 @@ body{
     height: auto;
     opacity: 0.4;
     filter: alpha(opacity=40); /* msie */
-    margin: 5px;
+    margin: 3px;
 }
 
 .item{
-    width: 45px;
+    width: 35px;
     height: auto;
     margin: 1px;
+}
+
+.skill_td{
+    padding: 0.1rem;
+}
+
+.skill_icon{
+    height: 20px;
+    width: auto;
 }
   
 .celula{
@@ -245,6 +249,8 @@ body{
 body {
     background-repeat: no-repeat;
     background-attachment: fixed; 
+    background-size: 100% auto;
+    padding-top: 30px;
 }
 
 section{

@@ -24,8 +24,7 @@
                 </td>
                 <td class="align-middle">
                     <a class="text-money my_font">Liquid.Miracle</a>
-                    <br>
-                    <span class="text-silver my_font">Mid lane</span>
+                    
                 </td>
                 <td>
                     <img class="player_img_mini" src="../assets/Players/team_liquid/miracle.png">
@@ -99,8 +98,6 @@
                 </td>
                 <td class="align-middle">
                     <a class="text-money my_font">VP.Ramzes666</a>
-                    <br>
-                    <span class="text-silver my_font">Mid lane</span>
                 </td>
                 <td>
                     <img class="player_img_mini" src="../assets/Players/virtus.pro/ramzes.png">

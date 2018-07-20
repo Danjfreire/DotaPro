@@ -5,15 +5,15 @@
             <div class="col-xl-4">
                 <img v-bind:src="require('../assets/Tournaments/rsz_china_super_major.jpg')" class="w-100">
             </div>
-             <div class="card-block col-xl-4 px-3">
-                <h4 class="card-title pageTitle">China Dota2 Super Major</h4>
-                    <span class="card-text text-red descricao">Major</span>
+             <div class="card-block col-xl-5 px-3">
+                <h4 class="card-title pageTitle">{{tournament.name}}</h4>
+                    <span class="card-text text-red descricao">{{tournament.tier}}</span>
                     <br>
-                    <span class="card-text text-silver my_font descricao" >China  <img v-bind:src="require('../assets/Regions/Cn.png')"></span>
+                    <span class="card-text text-silver my_font descricao" >China  <img v-bind:src="tournament.region_img"></span>
                     <br>
-                    <span class="card-text text-silver my_font">2018-06-02 | 2018-06-10</span>
+                    <span class="card-text text-silver my_font">{{tournament.start_date}} | {{tournament.end_date}}</span>
                     <br>
-                    <span class="card-text text-silver my_font">$1,500,000 - 2250 DPC Points</span>
+                    <span class="card-text text-silver my_font">${{tournament.prize}} - {{tournament.points}} DPC Points</span>
             </div>
             <div class="card-block px-3">
                 <br>
@@ -58,7 +58,6 @@ import Meta from "./Meta.vue";
 
 export default {
   name: "TournamentInfo",
-  props: ["tournament"],
   components: {
     TournamentStandings,
     TournamentMatches,
@@ -66,6 +65,17 @@ export default {
   },
   data() {
     return {
+      tournament:{
+        logo:"",
+        name:"China Dota2 Super Major",
+        tier:"Major",
+        start_date:"2018-06-02",
+        end_date:"2018-06-10",
+        region:"China",
+        region_img:require('../assets/Regions/Cn.png'),
+        prize:"1,500,000",
+        points:"2250"
+      },
       standings: [
         {
           team: "Team Liquid",

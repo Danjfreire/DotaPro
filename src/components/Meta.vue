@@ -10,18 +10,18 @@
                         <ul class="list-group">
                             <li class="list-group-item bg-dark2 border-money">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/alchemist_full.png')">
-                                <span class="text-silver">Alchemist</span>
-                                <span class="pageTitle float_right">80/120</span>
+                                <span class="text-silver my_font">Alchemist</span>
+                                <span class="pageTitle float_right my_font">80/120</span>
                             </li>
                             <li class="list-group-item bg-dark2 border-money">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/bane_full.png')">
-                                <span class="text-silver">Bane</span>
-                                <span class="pageTitle float_right">70/120</span>
+                                <span class="text-silver my_font">Bane</span>
+                                <span class="pageTitle float_right my_font">70/120</span>
                             </li>
                             <li class="list-group-item bg-dark2 border-money">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/death_prophet_full.png')">
-                                <span class="text-silver">Death Prophet</span>
-                                <span class="pageTitle float_right">60/120</span>
+                                <span class="text-silver my_font">Death Prophet</span>
+                                <span class="pageTitle float_right my_font">60/120</span>
                             </li>
                         </ul>
                     </div>
@@ -33,18 +33,18 @@
                         <ul class="list-group">
                             <li class="list-group-item bg-dark2 border-money">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/alchemist_full.png')">
-                                <span class="text-silver">Alchemist</span>
-                                <span class="pageTitle float_right">66.0%</span>
+                                <span class="text-silver my_font">Alchemist</span>
+                                <span class="pageTitle float_right my_font">66.0%</span>
                             </li>
                             <li class="list-group-item bg-dark2 border-money">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/bane_full.png')">
-                                <span class="text-silver">Bane</span>
-                                <span class="pageTitle float_right">62.20%</span>
+                                <span class="text-silver my_font">Bane</span>
+                                <span class="pageTitle float_right my_font">62.20%</span>
                             </li>
                             <li class="list-group-item bg-dark2 border-money">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/death_prophet_full.png')">
-                                <span class="text-silver">Death Prophet</span>
-                                <span class="pageTitle float_right">57%</span>
+                                <span class="text-silver my_font">Death Prophet</span>
+                                <span class="pageTitle float_right my_font">57%</span>
                             </li>
                         </ul>
                     </div>
@@ -56,18 +56,18 @@
                         <ul class="list-group">
                             <li class="list-group-item bg-dark2 border-money">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/alchemist_full.png')">
-                                <span class="text-silver">Alchemist</span>
-                                <span class="pageTitle float_right">66.0%</span>
+                                <span class="text-silver my_font">Alchemist</span>
+                                <span class="pageTitle float_right my_font">66.0%</span>
                             </li>
                             <li class="list-group-item bg-dark2 border-money">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/bane_full.png')">
-                                <span class="text-silver">Bane</span>
-                                <span class="pageTitle float_right">62.20%</span>
+                                <span class="text-silver my_font">Bane</span>
+                                <span class="pageTitle float_right my_font">62.20%</span>
                             </li>
                             <li class="list-group-item bg-dark2 border-money">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/death_prophet_full.png')">
-                                <span class="text-silver">Death Prophet</span>
-                                <span class="pageTitle float_right">57%</span>
+                                <span class="text-silver my_font">Death Prophet</span>
+                                <span class="pageTitle float_right my_font">57%</span>
                             </li>
                         </ul>
                     </div>
@@ -80,18 +80,18 @@
                         <ul class="list-group">
                             <li class="list-group-item bg-dark2 border-red">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/alchemist_full.png')">
-                                <span class="text-silver">Alchemist</span>
-                                <span class="pageTitle float_right">80/120</span>
+                                <span class="text-silver my_font">Alchemist</span>
+                                <span class="pageTitle float_right my_font">80/120</span>
                             </li>
                             <li class="list-group-item bg-dark2 border-red">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/bane_full.png')">
-                                <span class="text-silver">Bane</span>
-                                <span class="pageTitle float_right">70/120</span>
+                                <span class="text-silver my_font">Bane</span>
+                                <span class="pageTitle float_right my_font">70/120</span>
                             </li>
                             <li class="list-group-item bg-dark2 border-red">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/death_prophet_full.png')">
-                                <span class="text-silver">Death Prophet</span>
-                                <span class="pageTitle float_right">60/120</span>
+                                <span class="text-silver my_font">Death Prophet</span>
+                                <span class="pageTitle float_right my_font">60/120</span>
                             </li>
                         </ul>
                     </div>
@@ -102,18 +102,18 @@
                         <ul class="list-group">
                             <li class="list-group-item bg-dark2 border-red">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/alchemist_full.png')">
-                                <span class="text-silver">Alchemist</span>
-                                <span class="pageTitle float_right">66.0%</span>
+                                <span class="text-silver my_font">Alchemist</span>
+                                <span class="pageTitle float_right my_font">66.0%</span>
                             </li>
                             <li class="list-group-item bg-dark2 border-red">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/bane_full.png')">
-                                <span class="text-silver">Bane</span>
-                                <span class="pageTitle float_right">62.20%</span>
+                                <span class="text-silver my_font">Bane</span>
+                                <span class="pageTitle float_right my_font">62.20%</span>
                             </li>
                             <li class="list-group-item bg-dark2 border-red">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/death_prophet_full.png')">
-                                <span class="text-silver">Death Prophet</span>
-                                <span class="pageTitle float_right">57%</span>
+                                <span class="text-silver my_font">Death Prophet</span>
+                                <span class="pageTitle float_right my_font">57%</span>
                             </li>
                         </ul>
                     </div>
@@ -124,18 +124,18 @@
                         <ul class="list-group">
                             <li class="list-group-item bg-dark2 border-red">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/alchemist_full.png')">
-                                <span class="text-silver">Alchemist</span>
-                                <span class="pageTitle float_right">66.0%</span>
+                                <span class="text-silver my_font">Alchemist</span>
+                                <span class="pageTitle float_right my_font">66.0%</span>
                             </li>
                             <li class="list-group-item bg-dark2 border-red">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/bane_full.png')">
-                                <span class="text-silver">Bane</span>
+                                <span class="text-silver my_font">Bane</span>
                                 <span class="pageTitle float_right">62.20%</span>
                             </li>
                             <li class="list-group-item bg-dark2 border-red">
                                 <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/death_prophet_full.png')">
-                                <span class="text-silver">Death Prophet</span>
-                                <span class="pageTitle float_right">57%</span>
+                                <span class="text-silver my_font">Death Prophet</span>
+                                <span class="pageTitle float_right my_font">57%</span>
                             </li>
                         </ul>
                     </div>

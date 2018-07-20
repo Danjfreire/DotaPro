@@ -1,11 +1,11 @@
 <template>
     <div class="container my-3" >
-        <div class="card bg-dark2 my-3" v-for="campeonato in items">
+        <div class="card bg-dark2 my-3" v-for="campeonato in items" :key="campeonato.t_nome">
           <div class="row ">
             <div class="col-md-4">
               <img v-bind:src="require('../assets/Tournaments/'+ campeonato.t_logo)" class="w-100">
             </div>
-            <div class="card-block col-md-4 px-3">
+            <div class="card-block col-md-5 px-3">
               <h4><a class="pageTitle" href="#/tournament">{{campeonato.t_name}}</a></h4>
               <span class="card-text text-red descricao" >{{campeonato.t_tier}}</span>
               <br>

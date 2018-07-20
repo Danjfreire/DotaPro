@@ -1,5 +1,5 @@
 <template>
-<div class="container container-small transparente">
+<div class="container transparente">
     <div class="card bg-dark2">    
         <div class="card-body ">
             <div class="row">
@@ -8,7 +8,7 @@
                 <span class="pageTitle">Match 3943547236</span>
                 </div>
                  <div>
-                    <span class="player_stats_desc">PLAYED IN</span>
+                    <span class="player_stats_desc">PLAYED ON</span>
                     <br>
                     <span class="text-silver">2018-03-12</span>
                 </div>
@@ -40,6 +40,8 @@
             </h4>
         </div>
         <MatchPicks></MatchPicks>
+        <MatchBuilds side="Radiant"></MatchBuilds>
+        <MatchBuilds side="Dire"></MatchBuilds>
 
     </section>
 </div>
@@ -47,10 +49,12 @@
 
 <script>
 import MatchPicks from "./MatchPicks.vue";
+import MatchBuilds from "./MatchBuilds.vue"
 
 export default {
   components: {
-    MatchPicks
+    MatchPicks,
+    MatchBuilds
   }
 };
 </script>

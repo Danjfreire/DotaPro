@@ -2,12 +2,12 @@
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
     <div class="container container-small">
         <img class="navbar-brand mb-0 pt-0 pb-0" src="../assets/Backgrounds/DotaProLogo.png">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSite">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link text-silver" href="#/">Tournaments</a>
                 </li>

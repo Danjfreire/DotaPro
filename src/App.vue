@@ -9,6 +9,7 @@
 import Navbar from "./components/Navbar.vue";
 import "./css/custom.css";
 
+
 export default {
   name: "App",
   components: {
