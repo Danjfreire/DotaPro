@@ -45,7 +45,7 @@
     </div>
     
     <TournamentStandings v-bind:standings="tournament.standings"></TournamentStandings>
-    <TournamentMatches></TournamentMatches>
+    <TournamentMatches v-bind:matches="matchIDs"></TournamentMatches>
     <Meta></Meta>
     
 </div>
@@ -76,6 +76,12 @@ export default {
     }, response =>{
       //error callback
     })
+    
+    this.$http.get("http://localhost:5000/matches/9943").then(response =>{
+      this.matchIDs = response.body;
+    }, response =>{
+      //error callback
+    })
   },
   data() {
     return {
@@ -91,104 +97,7 @@ export default {
         prize:"1,500,000",
         points:"2250" */
       },
-      standings: []
-        /* {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        },
-        {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        },
-        {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        },
-        {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        },
-        {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        },
-        {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        },
-        {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        },
-        {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        },
-        {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        },
-        {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        },
-        {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        },
-        {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        },
-        {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        },
-        {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        },
-        {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        },
-        {
-          team: "Team Liquid",
-          logo: "Team_Liquid.png",
-          prize: "200,000",
-          points: "1150"
-        } */
-       
+      matchIDs:[] 
     };
   }
 };

@@ -13,12 +13,12 @@
                     </tr>
                 </thead>
                 <tbody class="bg-dark2 col-xl">
-                    <tr>
-                        <td class="cold-md-1 align-middle"><a class="pageTitle" href="#/match">9800233</a></td>
+                    <tr v-for="match in matchdata" :key="match.match_id">
+                        <td class="cold-md-1 align-middle"><a class="pageTitle" href="#/match">{{match.match_id}}</a></td>
                         <td class="col-md-1 align-middle">
-                            <span class="text-money">38</span>
+                            <span class="text-money">{{match.radiant_score}}</span>
                             <span class="text-silver">:</span>
-                            <span class="text-red">25</span>
+                            <span class="text-red">{{match.dire_score}}</span>
                         </td>
                         <td class="col-md-4">
                             <span class="text-silver col-xl-1">
@@ -56,7 +56,7 @@
                                 </div>
                             </div>
                         </td>
-                         <td class=" col-md-1 text-silver align-middle">40:21</td>
+                         <td class=" col-md-1 text-silver align-middle">{{secondsToMinutes(match.duration)}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -66,6 +66,44 @@
 
 <script>
 export default {
-    name:"TournamentMatches"
-}
+  name: "TournamentMatches",
+  props: ["matches"],
+  created() {
+    for (var i = 0; i < this.matches.length; i++) {
+      this.$http.get("https://api.opendota.com/api/matches/3943981461").then(
+        response => {
+          this.matchdata.push(response.body);
+          console.log(this.matchdata);
+        },
+        response => {
+          console.log(response);
+        }
+      );
+    }
+  },
+  data() {
+    return {
+      matchdata: []
+    };
+  },
+  methods: {
+    secondsToMinutes: function(seconds) {
+      var sec_num = parseInt(seconds, 10); // don't forget the second param
+      var hours = Math.floor(sec_num / 3600);
+      var minutes = Math.floor((sec_num - hours * 3600) / 60);
+      var seconds = sec_num - hours * 3600 - minutes * 60;
+
+      if (hours < 10) {
+        hours = "0" + hours;
+      }
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+      if (seconds < 10) {
+        seconds = "0" + seconds;
+      }
+      return  minutes + ":" + seconds;
+    }
+  }
+};
 </script>
