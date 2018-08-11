@@ -5,13 +5,13 @@
             <div class="col-xl-6">
                 <table class="table table-striped table-dark col-xl-6">
                     <tbody class="col-xl bg-dark2">
-                        <tr v-for="(item, index) in sliceItems(0,8)">
-                            <td align="center" class="text-first">{{index + 1}}</td>
+                        <tr v-for="item in standings.slice(0,8)" :key="item.name">
+                            <td align="center" class="text-first">{{item.place}}</td>
                             <td class="text-silver">
-                                <img class="team_img_mini2" v-bind:src="require('../assets/Teams/'+ item.logo)">{{item.team}}</td>
+                                <img class="team_img_mini2" v-bind:src="item.team.logo">{{item.team.name}}</td>
                             <td class="text-silver">
-                                <span class="pageTitle">1,125 Points</span> +
-                                <span class="text-money">$555,000</span>
+                                <span v-if="item.points != 0" class="pageTitle">{{item.points}} points +</span> 
+                                <span class="text-money">${{item.prize}}</span>
                             </td>
                         </tr>
                     </tbody>
@@ -20,11 +20,11 @@
             <div class="col-xl-6">
                 <table class="table table-striped table-dark col-xl">
                     <tbody class="col-xl bg-dark2">
-                        <tr v-for="(item, index) in sliceItems(8,16)">
-                            <td align="center" scope="row" class="text-silver">{{index + 1}}</td>
+                        <tr v-for="item in standings.slice(8,16)" :key="item.name">
+                            <td align="center" scope="row" class="text-silver">{{item.place}}</td>
                             <td class="text-silver">
-                                <img class="team_img_mini2" v-bind:src="require('../assets/Teams/'+ item.logo)">{{item.team}}</td>
-                            <td class="text-money">$22,000</td>
+                                <img class="team_img_mini2" v-bind:src="item.team.logo">{{item.team.name}}</td>
+                            <td class="text-money">${{item.prize}}</td>
                         </tr>
                     </tbody>
                     </table>
@@ -39,7 +39,9 @@ export default {
   props: ["standings"],
   methods: {
     sliceItems: function(start, end) {
-      return this.standings.slice(start, end);
+        console.log("Logging here");
+        console.log(this.standings);
+       //return this.standings.slice(start, end); 
     }
   }
 };

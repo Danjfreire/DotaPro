@@ -26,25 +26,47 @@ export default {
   components: {
     Tcard
   },
+  created(){
+    this.$http.get("http://localhost:5000/tournaments").then(response =>{
+      this.tournaments = response.body;
+    }, response =>{
+      //error callback
+    })
+  },
   data() {
     return {
-      tournaments: [
-        {
-          t_name: "China Dota2 Super Major",
-          t_logo: "rsz_china_super_major.jpg",
-          t_tier: "Major",
-          t_startDate: "2018-06-02",
-          t_endDate: "2018-06-10",
-          t_prizePool: "$1,500,000",
-          t_dpcPoints: "2250",
-          t_firstPlace: "Team Liquid",
-          t_firstPlaceLogo: "Team_Liquid.png",
-          t_secondPlace: "Virtus.pro",
-          t_secondPlaceLogo: "Virtus_Pro.png",
-          t_thirdPlace: "PSG.LGD",
-          t_thirdPlaceLogo: "PSG.LGD_full_logo.png"
-        },
-        {
+      tournaments: 
+      [
+        /* {
+          name: "China Dota2 Super Major",
+          logo: "rsz_china_super_major.jpg",
+          tier: "Major",
+          startDate: "2018-06-02",
+          endDate: "2018-06-10",
+          prizePool: "$1,500,000",
+          points: "2250",
+          standings: [
+            {
+            id: 1,
+            place: "1st",
+            prize: "555,000",
+            points: "1,125",
+            team_id: 2163,
+            team: {
+                id: 2,
+                opendotaID: 2163,
+                wins: 686,
+                losses: 426,
+                name: "Team Liquid",
+                tag: "Liquid",
+                logo: "https://steamcdn-a.akamaihd.net/apps/dota2/images/team_logos/2163.png"
+            
+            }
+          }
+          ]
+        } */          
+        
+        /* ,{
           t_name: "Dota 2 Asia Championship",
           t_logo: "dac2018.jpg",
           t_tier: "Major",
@@ -58,7 +80,7 @@ export default {
           t_secondPlaceLogo: "PSG.LGD_full_logo.png",
           t_thirdPlace: "Virtus.pro",
           t_thirdPlaceLogo: "Virtus_Pro.png"
-        }
+        } */
       ]
     };
   }

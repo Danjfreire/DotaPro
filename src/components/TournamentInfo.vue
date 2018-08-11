@@ -9,11 +9,11 @@
                 <h4 class="card-title pageTitle">{{tournament.name}}</h4>
                     <span class="card-text text-red descricao">{{tournament.tier}}</span>
                     <br>
-                    <span class="card-text text-silver my_font descricao" >China  <img v-bind:src="tournament.region_img"></span>
+                    <span class="card-text text-silver my_font descricao" >{{tournament.region}}  <img v-bind:src="tournament.region_img"></span>
                     <br>
-                    <span class="card-text text-silver my_font">{{tournament.start_date}} | {{tournament.end_date}}</span>
+                    <span class="card-text text-silver my_font">{{tournament.startDate}} | {{tournament.endDate}}</span>
                     <br>
-                    <span class="card-text text-silver my_font">${{tournament.prize}} - {{tournament.points}} DPC Points</span>
+                    <span class="card-text text-silver my_font">${{tournament.prizePool}} - {{tournament.points}} DPC Points</span>
             </div>
             <div class="card-block px-3">
                 <br>
@@ -21,30 +21,30 @@
                     <img v-bind:src="require('../assets/Icons/gold-medal.png')">
                 </span>
                 <span>
-                    <img class="team_img_mini" v-bind:src="require('../assets/Teams/Team_Liquid.png')">
+                    <img class="team_img_mini" v-bind:src="tournament.standings[0].team.logo">
                 </span>
-                <span class="card-text text-silver">Team Liquid</span>
+                <span class="card-text text-silver">{{tournament.standings[0].team.name}}</span>
                 <br>
                 <span>
                     <img v-bind:src="require('../assets/Icons/second.png')">
                  </span>
                 <span>
-                    <img class="team_img_mini" v-bind:src="require('../assets/Teams/Team_Liquid.png')">
+                    <img class="team_img_mini" v-bind:src="tournament.standings[1].team.logo">
                 </span>
-                <span class="card-text text-silver">Virtus.pro</span>
+                <span class="card-text text-silver">{{tournament.standings[1].team.name}}</span>
                 <br>
                 <span>
                     <img v-bind:src="require('../assets/Icons/third.png')">
                 </span>
                 <span>
-                    <img class="team_img_mini" v-bind:src="require('../assets/Teams/Team_Liquid.png')">
+                    <img class="team_img_mini" v-bind:src="tournament.standings[2].team.logo">
                 </span>
-                <span class="card-text text-silver">PSG.LGD</span>
+                <span class="card-text text-silver">{{tournament.standings[2].team.name}}</span>
             </div>
         </div>
     </div>
     
-    <TournamentStandings v-bind:standings="standings"></TournamentStandings>
+    <TournamentStandings v-bind:standings="tournament.standings"></TournamentStandings>
     <TournamentMatches></TournamentMatches>
     <Meta></Meta>
     
@@ -55,6 +55,7 @@
 import TournamentStandings from "./TournamentStandings.vue";
 import TournamentMatches from "./TournamentMatches.vue";
 import Meta from "./Meta.vue";
+import {EventBus} from './eventBus.js'
 
 export default {
   name: "TournamentInfo",
@@ -63,10 +64,24 @@ export default {
     TournamentMatches,
     Meta
   },
+  created() {
+    /* EventBus.$on('tournamentSelected', (parametro) =>{
+      console.log("Emitiu");
+      console.log("Dado antes:",this.dado);
+      this.dado = parametro;
+      console.log("Dado depois:",this.dado);
+    }) */
+    this.$http.get("http://localhost:5000/tournaments").then(response =>{
+      this.tournament = response.body[0];
+    }, response =>{
+      //error callback
+    })
+  },
   data() {
     return {
+      dado:'',
       tournament:{
-        logo:"",
+        /* logo:"",
         name:"China Dota2 Super Major",
         tier:"Major",
         start_date:"2018-06-02",
@@ -74,10 +89,10 @@ export default {
         region:"China",
         region_img:require('../assets/Regions/Cn.png'),
         prize:"1,500,000",
-        points:"2250"
+        points:"2250" */
       },
-      standings: [
-        {
+      standings: []
+        /* {
           team: "Team Liquid",
           logo: "Team_Liquid.png",
           prize: "200,000",
@@ -172,8 +187,8 @@ export default {
           logo: "Team_Liquid.png",
           prize: "200,000",
           points: "1150"
-        }
-      ]
+        } */
+       
     };
   }
 };
