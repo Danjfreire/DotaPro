@@ -73,7 +73,7 @@
                         <tbody class="bg-dark2">
                             <tr v-for="i in 5">
                                 <td>
-                                    <img class ="hero_pick" v-bind:src="require('../assets/Hero-icons/alchemist_full.png')">
+                                    <img class ="hero_pick" v-bind:src="require('../assets/Hero-icons/73.png')">
                                     <span class="text-silver my_font">Alchemist</span>
                                 </td>
                                 <td>
@@ -107,7 +107,7 @@
                         <tbody class="bg-dark2">
                             <tr v-for="i in 6">
                                 <td>
-                                    <img class ="hero_pick" v-bind:src="require('../assets/Hero-icons/alchemist_full.png')">
+                                    <img class ="hero_pick" v-bind:src="require('../assets/Hero-icons/73.png')">
                                     <span class="text-silver my_font">Alchemist</span>
                                 </td>
                                 <td>

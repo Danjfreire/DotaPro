@@ -1,7 +1,9 @@
 <template>
 <body class="background_transparente">
       <Navbar></Navbar>
-      <router-view/>  
+      <keep-alive include="Match">
+        <router-view></router-view>  
+      </keep-alive>
 </body>
 </template>
 

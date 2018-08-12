@@ -33,7 +33,7 @@
             <tbody class="bg-radiant">
                 <tr v-for="i in 5">
                     <td class="align-middle">
-                        <img class="hero_pick2 celula" src="../assets/Hero-icons/luna_full.png">
+                        <img class="hero_pick2 celula" src="../assets/Hero-icons/48.png">
                     </td>
                     <td class="align-middle skill_td" v-for="i in 25">
                         <img class="skill_icon" src="../assets/Skills/Lucent_Beam_icon.png">

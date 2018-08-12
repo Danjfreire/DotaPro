@@ -86,17 +86,7 @@ export default {
   data() {
     return {
       dado:'',
-      tournament:{
-        /* logo:"",
-        name:"China Dota2 Super Major",
-        tier:"Major",
-        start_date:"2018-06-02",
-        end_date:"2018-06-10",
-        region:"China",
-        region_img:require('../assets/Regions/Cn.png'),
-        prize:"1,500,000",
-        points:"2250" */
-      },
+      tournament:{},
       matchIDs:[] 
     };
   }

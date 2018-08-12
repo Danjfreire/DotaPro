@@ -7,14 +7,14 @@
                     <tr>
                         <th class="col-xl-1 text-silver ">Match ID</th>
                         <th class="col-xl-1 text-silver ">Score</th>
-                        <th class="col-xl-4 text-silver ">Winner</th>
-                        <th class="col-xl-4 text-silver ">Loser</th>
+                        <th class="col-xl-4 text-silver ">Radiant</th>
+                        <th class="col-xl-4 text-silver ">Dire</th>
                         <th class="col-xl-1 text-silver ">Duration</th>
                     </tr>
                 </thead>
                 <tbody class="bg-dark2 col-xl">
                     <tr v-for="match in matchdata" :key="match.match_id">
-                        <td class="cold-md-1 align-middle"><a class="pageTitle" href="#/match">{{match.match_id}}</a></td>
+                        <td class="cold-md-1 align-middle"><a class="pageTitle" v-on:click="selectMatch(match)" href="#/match">{{match.match_id}}</a></td>
                         <td class="col-md-1 align-middle">
                             <span class="text-money">{{match.radiant_score}}</span>
                             <span class="text-silver">:</span>
@@ -22,37 +22,35 @@
                         </td>
                         <td class="col-md-4">
                             <span class="text-silver col-xl-1">
-                                <img class="team_img_mini2" v-bind:src="require('../assets/Teams/Team_Liquid.png')">Team Liquid</span>
-                            <span class="text-money col-xl-1">Radiant</span>
+                                <img class="team_img_mini2" v-bind:src="match.radiant_team.logo_url">{{match.radiant_team.name}}</span>
                             <div class="row">
                                 <div class="col-xl-1"></div>
                                 <div class="col-xl-2" v-for="i in 5">
-                                    <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/luna_full.png')">
+                                    <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/48.png')">
                                 </div>
                                 <div class="col-xl-1"></div>
                             </div>
                             <div class="row">
                                 <div class="col-xl-1"></div>
                                 <div v-for="i in 6">
-                                    <img class="hero_ban" v-bind:src="require('../assets/Hero-icons/antimage_full.png')">
+                                    <img class="hero_ban" v-bind:src="require('../assets/Hero-icons/1.png')">
                                 </div>
                             </div>
                         </td>
                         <td class="col-md-4">
                             <span class="text-silver col-xl-1">
-                                <img class="team_img_mini2" v-bind:src="require('../assets/Teams/Virtus_pro.png')">Virtus.pro</span>
-                            <span class="text-red col-xl-1">Dire</span>
+                                <img class="team_img_mini2" v-bind:src="match.dire_team.logo_url">{{match.dire_team.name}}</span>
                             <div class="row">
                                 <div class="col-xl-1"></div>
                                 <div class="col-xl-2" v-for="i in 5">
-                                    <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/luna_full.png')">
+                                    <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/48.png')">
                                 </div>
                                 <div class="col-xl-1"></div>
                             </div>
                             <div class="row">
                                 <div class="col-xl-1"></div>
                                 <div v-for="i in 6">
-                                    <img class="hero_ban" v-bind:src="require('../assets/Hero-icons/antimage_full.png')">
+                                    <img class="hero_ban" v-bind:src="require('../assets/Hero-icons/1.png')">
                                 </div>
                             </div>
                         </td>
@@ -65,6 +63,9 @@
 </template>
 
 <script>
+
+import {EventBus} from './eventBus.js'
+
 export default {
   name: "TournamentMatches",
   props: ["matches"],
@@ -103,6 +104,9 @@ export default {
         seconds = "0" + seconds;
       }
       return  minutes + ":" + seconds;
+    },
+    selectMatch: function(match) {
+        this.bus.$emit("matchSelected", match);
     }
   }
 };
