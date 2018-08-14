@@ -6,7 +6,7 @@
                 <table class="table table-striped table-dark col-xl-6">
                     <tbody class="col-xl bg-dark2">
                         <tr v-for="item in standings.slice(0,8)" :key="item.name">
-                            <td align="center" class="text-first">{{item.place}}</td>
+                            <td align="center" class="text-silver">{{item.place}}</td>
                             <td class="text-silver">
                                 <img class="team_img_mini2" v-bind:src="item.team.logo">{{item.team.name}}</td>
                             <td class="text-silver">

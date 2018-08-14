@@ -45,7 +45,7 @@
     </div>
     
     <TournamentStandings v-bind:standings="tournament.standings"></TournamentStandings>
-    <TournamentMatches v-bind:matches="matchIDs"></TournamentMatches>
+    <TournamentMatches v-bind:matches="matchdata"></TournamentMatches>
     <Meta></Meta>
     
 </div>
@@ -65,12 +65,6 @@ export default {
     Meta
   },
   created() {
-    /* EventBus.$on('tournamentSelected', (parametro) =>{
-      console.log("Emitiu");
-      console.log("Dado antes:",this.dado);
-      this.dado = parametro;
-      console.log("Dado depois:",this.dado);
-    }) */
     this.$http.get("http://localhost:5000/tournaments").then(response =>{
       this.tournament = response.body[0];
     }, response =>{
@@ -79,9 +73,23 @@ export default {
     
     this.$http.get("http://localhost:5000/matches/9943").then(response =>{
       this.matchIDs = response.body;
+        for (var i = 0; i < this.matchIDs.length; i++) {
+          this.$http.get("https://api.opendota.com/api/matches/"+ this.matchIDs[i].matchid).then(
+            response => {
+              this.matchdata.push(response.body);
+              console.log(this.matchdata);
+            },
+            response => {
+              console.log(response);
+            }
+          );
+        }
+      console.log(this.matchIDs);
     }, response =>{
-      //error callback
+      console.log("deu pau aqui");
     })
+
+
   },
   data() {
     return {
@@ -89,7 +97,8 @@ export default {
       tournament:{
           standings:''
       },
-      matchIDs:[] 
+      matchIDs:[],
+      matchdata:[] 
     };
   }
 };

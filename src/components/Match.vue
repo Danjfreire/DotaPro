@@ -51,7 +51,7 @@
 <script>
 import MatchPicks from "./MatchPicks.vue";
 import MatchBuilds from "./MatchBuilds.vue";
-import { EventBus } from "./eventBus.js";
+import  EventBus  from "./eventBus";
 
 export default {
   components: {
@@ -59,14 +59,15 @@ export default {
     MatchBuilds
   },
   created() {
-    this.$http.get("https://api.opendota.com/api/matches/3943981461").then(
+    
+     this.$http.get("https://api.opendota.com/api/matches/"+ this.$route.params.id).then(
       response => {
         this.matchdata = response.body;
       },
       response => {
         //error
       }
-    );
+    ); 
   },
   data() {
     return {

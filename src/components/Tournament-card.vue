@@ -36,8 +36,6 @@
 
 <script>
 
-import {EventBus} from './eventBus.js'
-
 export default {
   name: "Tcard",
   props: ["items"],

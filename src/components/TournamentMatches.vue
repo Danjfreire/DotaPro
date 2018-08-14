@@ -13,8 +13,8 @@
                     </tr>
                 </thead>
                 <tbody class="bg-dark2 col-xl">
-                    <tr v-for="match in matchdata" :key="match.match_id">
-                        <td class="cold-md-1 align-middle"><a class="pageTitle" v-on:click="selectMatch(match)" href="#/match">{{match.match_id}}</a></td>
+                    <tr v-for="match in matches" :key="match.match_id">
+                        <td class="cold-md-1 align-middle"><a class="pageTitle" v-on:click="selectMatch(match)" v-bind:href="'#/match/' + match.match_id" >{{match.match_id}}</a></td>
                         <td class="col-md-1 align-middle">
                             <span class="text-money">{{match.radiant_score}}</span>
                             <span class="text-silver">:</span>
@@ -64,14 +64,14 @@
 
 <script>
 
-import {EventBus} from './eventBus.js'
+import EventBus from './eventBus'
 
 export default {
   name: "TournamentMatches",
   props: ["matches"],
   created() {
-    for (var i = 0; i < this.matches.length; i++) {
-      this.$http.get("https://api.opendota.com/api/matches/3943981461").then(
+   /*  for (var i = 0; i < this.matches.length; i++) {
+      this.$http.get("https://api.opendota.com/api/matches/"+ this.matches[i].matchid).then(
         response => {
           this.matchdata.push(response.body);
           console.log(this.matchdata);
@@ -80,7 +80,9 @@ export default {
           console.log(response);
         }
       );
-    }
+    } */
+
+    
   },
   data() {
     return {
@@ -116,7 +118,7 @@ export default {
       return  minutes + ":" + seconds;
     },
     selectMatch: function(match) {
-        this.bus.$emit("matchSelected", match);
+        EventBus.$emit('matchSelected', match);
     }
   }
 };

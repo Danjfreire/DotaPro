@@ -23,11 +23,11 @@
                     <img class="hero_pick2 celula" v-bind:src="require('../assets/Hero-icons/'+ player.hero_id +'.png')">
                 </td>
                 <td class="align-middle">
-                    <a class="text-money my_font">{{player.name}}</a>
+                    <a class="text-money my_font">{{match.radiant_team.tag}}.{{player.name}}</a>
                     
                 </td>
                 <td>
-                    <img class="player_img_mini" v-bind:src="match.radiant_team.logo_url">
+                    <img class="player_img_mini" v-bind:src="require('../assets/Players/' +player.account_id + '.png')">
                 </td>
                 <td class="align-middle">
                    <span class="text-silver my_font">{{player.kills}}</span>
@@ -60,9 +60,12 @@
                 </td>
                 <td>
                     <div class="row">
-                        <div v-for="i in 6">
-                            <img class="item" src="../assets/Itens/Boots_of_Speed_icon.png">
-                        </div>
+                        <img class="item" v-bind:src="require('../assets/Itens/'+ player.item_0 +'.png')">
+                        <img class="item" v-bind:src="require('../assets/Itens/'+ player.item_1 +'.png')">
+                        <img class="item" v-bind:src="require('../assets/Itens/'+ player.item_2 +'.png')">
+                        <img class="item" v-bind:src="require('../assets/Itens/'+ player.item_3 +'.png')">
+                        <img class="item" v-bind:src="require('../assets/Itens/'+ player.item_4 +'.png')">
+                        <img class="item" v-bind:src="require('../assets/Itens/'+ player.item_5 +'.png')">
                     </div>
                 </td>
             </tr>
@@ -97,10 +100,10 @@
                     <img class="hero_pick2 celula" v-bind:src="require('../assets/Hero-icons/'+ player.hero_id +'.png')">
                 </td>
                 <td class="align-middle">
-                    <a class="text-money my_font">{{player.name}}</a>
+                    <a class="text-money my_font">{{match.dire_team.tag}}.{{player.name}}</a>
                 </td>
                 <td>
-                    <img class="player_img_mini" v-bind:src="match.dire_team.logo_url">
+                    <img class="player_img_mini" v-bind:src="require('../assets/Players/' +player.account_id + '.png')">
                 </td>
                 <td class="align-middle">
                    <span class="text-silver my_font">{{player.kills}}</span>
@@ -133,9 +136,12 @@
                 </td>
                 <td>
                     <div class="row">
-                        <div v-for="i in 6">
-                            <img class="item" src="../assets/Itens/Boots_of_Speed_icon.png">
-                        </div>
+                        <img class="item" v-bind:src="require('../assets/Itens/'+ player.item_0 +'.png')">
+                        <img class="item" v-bind:src="require('../assets/Itens/'+ player.item_1 +'.png')">
+                        <img class="item" v-bind:src="require('../assets/Itens/'+ player.item_2 +'.png')">
+                        <img class="item" v-bind:src="require('../assets/Itens/'+ player.item_3 +'.png')">
+                        <img class="item" v-bind:src="require('../assets/Itens/'+ player.item_4 +'.png')">
+                        <img class="item" v-bind:src="require('../assets/Itens/'+ player.item_5 +'.png')">
                     </div>
                 </td>
             </tr>
