@@ -69,7 +69,7 @@
         </tbody>
     </table>
     <div class="col-md-12 text-center ">
-        <img v-for="i in 11" class="hero_pick2" src="../assets/Hero-icons/1.png">
+        <img v-for="ban in radiant_bans(match.picks_bans)" :key="ban.hero_id" class="hero_pick2" v-bind:src="require('../assets/Hero-icons/'+ ban.hero_id +'.png')">
         
     </div>
     <br>
@@ -143,7 +143,7 @@
     </table>
 
     <div class="col-md-12 text-center">
-        <img v-for="i in 11" class="hero_pick2" src="../assets/Hero-icons/1.png">
+        <img v-for="ban in dire_bans(match.picks_bans)" :key="ban.hero_id" class="hero_pick2" v-bind:src="require('../assets/Hero-icons/'+ ban.hero_id +'.png')">
         
     </div>
 
@@ -155,6 +155,18 @@
 <script>
 export default {
   name: "MatchPicks",
-  props:["match"]
+  props: ["match"],
+  methods: {
+    radiant_bans: function(picks_bans) {
+      return picks_bans.filter(function(bans) {
+        return bans.is_pick === false && bans.team === 0;
+      });
+    },
+    dire_bans: function(picks_bans) {
+      return picks_bans.filter(function(bans) {
+        return bans.is_pick === false && bans.team === 1;
+      });
+    }
+  }
 };
 </script>

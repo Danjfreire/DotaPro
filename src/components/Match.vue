@@ -41,8 +41,8 @@
             </h4>
         </div>
         <MatchPicks v-bind:match="matchdata"></MatchPicks>
-        <MatchBuilds side="Radiant"></MatchBuilds>
-        <MatchBuilds side="Dire"></MatchBuilds>
+        <MatchBuilds v-bind:side="Radiant" v-bind:players="matchdata.players.slice(0,5)"></MatchBuilds>
+        <MatchBuilds side="Dire" v-bind:players="matchdata.players.slice(5,10)"></MatchBuilds>
 
     </section>
 </div>

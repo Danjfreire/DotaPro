@@ -86,7 +86,9 @@ export default {
   data() {
     return {
       dado:'',
-      tournament:{},
+      tournament:{
+          standings:''
+      },
       matchIDs:[] 
     };
   }

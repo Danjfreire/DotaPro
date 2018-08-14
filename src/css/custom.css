@@ -8325,11 +8325,8 @@ a.text-dire:hover, a.text-dire:focus {
   height: auto;
   margin: 1px; }
 
-.skill_td {
-  padding: 0.1rem; }
-
 .skill_icon {
-  height: 20px;
+  height: 15px;
   width: auto; }
 
 .celula {

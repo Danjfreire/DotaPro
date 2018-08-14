@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <h5 class="text-silver">{{side}} Builds</h5>
-        <table class="table table-striped table-dark">
+        <table class="table table-striped table-dark col-12">
             <thead>
                 <th class="text-silver my_font">Hero</th>
                 <th class="text-silver my_font">1</th>
@@ -31,9 +31,9 @@
                 <th class="text-silver my_font">25</th>
             </thead>
             <tbody class="bg-radiant">
-                <tr v-for="i in 5">
+                <tr v-for="player in players" :key="player.name">
                     <td class="align-middle">
-                        <img class="hero_pick2 celula" src="../assets/Hero-icons/48.png">
+                        <img class="hero_pick2 celula" v-bind:src="require('../assets/Hero-icons/'+ player.hero_id+'.png')">
                     </td>
                     <td class="align-middle skill_td" v-for="i in 25">
                         <img class="skill_icon" src="../assets/Skills/Lucent_Beam_icon.png">
@@ -47,6 +47,6 @@
 
 <script>
 export default {
-    props: ["side"]
+    props: ["side","players"]
 }
 </script>

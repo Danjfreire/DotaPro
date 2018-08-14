@@ -25,15 +25,15 @@
                                 <img class="team_img_mini2" v-bind:src="match.radiant_team.logo_url">{{match.radiant_team.name}}</span>
                             <div class="row">
                                 <div class="col-xl-1"></div>
-                                <div class="col-xl-2" v-for="i in 5">
-                                    <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/48.png')">
+                                <div class="col-xl-2" v-for="player in match.players.slice(0,5)" :key="player.name">
+                                    <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/' + player.hero_id+ '.png')">
                                 </div>
                                 <div class="col-xl-1"></div>
                             </div>
                             <div class="row">
                                 <div class="col-xl-1"></div>
-                                <div v-for="i in 6">
-                                    <img class="hero_ban" v-bind:src="require('../assets/Hero-icons/1.png')">
+                                <div v-for="ban in radiant_bans(match.picks_bans)" :key="ban.hero_id">
+                                    <img class="hero_ban" v-bind:src="require('../assets/Hero-icons/'+ ban.hero_id +'.png')">
                                 </div>
                             </div>
                         </td>
@@ -42,15 +42,15 @@
                                 <img class="team_img_mini2" v-bind:src="match.dire_team.logo_url">{{match.dire_team.name}}</span>
                             <div class="row">
                                 <div class="col-xl-1"></div>
-                                <div class="col-xl-2" v-for="i in 5">
-                                    <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/48.png')">
+                                <div class="col-xl-2" v-for="player in match.players.slice(5,10)" :key="player.name">
+                                    <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/' + player.hero_id + '.png')">
                                 </div>
                                 <div class="col-xl-1"></div>
                             </div>
                             <div class="row">
                                 <div class="col-xl-1"></div>
-                                <div v-for="i in 6">
-                                    <img class="hero_ban" v-bind:src="require('../assets/Hero-icons/1.png')">
+                                <div v-for="ban in dire_bans(match.picks_bans)" :key="ban.hero_id">
+                                    <img class="hero_ban" v-bind:src="require('../assets/Hero-icons/'+ ban.hero_id +'.png')">
                                 </div>
                             </div>
                         </td>
@@ -88,6 +88,16 @@ export default {
     };
   },
   methods: {
+    radiant_bans: function(picks_bans){
+        return picks_bans.filter(function (bans){
+            return bans.is_pick === false && bans.team === 0
+        });
+    },
+    dire_bans: function(picks_bans){
+        return picks_bans.filter(function (bans){
+            return bans.is_pick === false && bans.team === 1
+        });
+    },
     secondsToMinutes: function(seconds) {
       var sec_num = parseInt(seconds, 10); // don't forget the second param
       var hours = Math.floor(sec_num / 3600);
