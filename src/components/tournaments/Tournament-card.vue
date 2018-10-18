@@ -1,12 +1,18 @@
 <template>
   <b-container>
-    <div>
-      <b-row align-h="around">
-        <b-col cols="4"><img src="../../assets/Tournaments/rsz_china_super_major.jpg" class="w-100"></b-col>
-        <b-col cols="4">Quatro colunas</b-col>
+    <b-row>
+      <a href="#">
+        <b-col md="4" v-for="tournament in tournaments" :key="tournament.name">
+          <b-card class="goldenText" :title="tournament.name" img-src="https://i2.wp.com/www.vpesports.com/wp-content/uploads/2018/06/19.jpg?fit=1000%2C563&ssl=1"
+            bg-variant="dark">
+            <p class="card-text">
+              <b-img src="https://liquipedia.net/commons/images/c/cd/Cn.png" /> Shangai</p>
+            <p>{{tournament.startDate}} to {{tournament.endDate}}</p>
+            <pre class="goldenText">{{tournament.prizePool}}     {{tournament.points}} DPC points</pre>
+          </b-card>
+        </b-col>
+      </a>
     </b-row>
-    </div>
-    
   </b-container>
 </template>
 
