@@ -8,9 +8,10 @@
 </template>
 
 <script>
-import Navbar from "./components/Navbar.vue";
+import Navbar from "./components/navbar/Navbar.vue";
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 import "./css/custom.css";
-
 
 export default {
   name: "App",
@@ -22,6 +23,6 @@ export default {
 
 <style>
 body {
-  background-image: url("./assets/Backgrounds/rsz_1aegis_background.jpg");
+    background-color: #201F1D;
 }
 </style>

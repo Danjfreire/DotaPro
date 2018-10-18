@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Tournaments from '@/components/Tournaments'
+import Tournaments from '@/components/tournaments/Tournaments'
 import Teams from '@/components/Teams'
 import TournamentInfo from '@/components/TournamentInfo'
 import TeamPage from '@/components/TeamPage'

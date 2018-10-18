@@ -5,27 +5,29 @@
             <table class="table table-striped table-dark">
                 <thead class="bg-dark2">
                     <tr>
-                        <th class="col-xl-1 text-silver ">Match ID</th>
+                        <th class="col-md-1 text-silver ">Match ID</th>
                         <th class="col-xl-1 text-silver ">Score</th>
                         <th class="col-xl-4 text-silver ">Radiant</th>
                         <th class="col-xl-4 text-silver ">Dire</th>
                         <th class="col-xl-1 text-silver ">Duration</th>
                     </tr>
                 </thead>
-                <tbody class="bg-dark2 col-xl">
+                <tbody class="bg-dark2">
                     <tr v-for="match in matches" :key="match.match_id">
-                        <td class="cold-md-1 align-middle"><a class="pageTitle" v-on:click="selectMatch(match)" v-bind:href="'#/match/' + match.match_id" >{{match.match_id}}</a></td>
-                        <td class="col-md-1 align-middle">
+                        <td class="align-middle col-md-1">
+                            <a class="pageTitle" v-on:click="selectMatch(match)" v-bind:href="'#/match/' + match.match_id">{{match.match_id}}</a>
+                        </td>
+                        <td class="align-middle">
                             <span class="text-money">{{match.radiant_score}}</span>
                             <span class="text-silver">:</span>
                             <span class="text-red">{{match.dire_score}}</span>
                         </td>
-                        <td class="col-md-4">
+                        <td>
                             <span class="text-silver col-xl-1">
                                 <img class="team_img_mini2" v-bind:src="match.radiant_team.logo_url">{{match.radiant_team.name}}</span>
                             <div class="row">
                                 <div class="col-xl-1"></div>
-                                <div class="col-xl-2" v-for="player in match.players.slice(0,5)" :key="player.name">
+                                <div class="col-xl-2" v-for="player in match.players.slice(0,1)" :key="player.name">
                                     <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/' + player.hero_id+ '.png')">
                                 </div>
                                 <div class="col-xl-1"></div>
@@ -37,12 +39,12 @@
                                 </div>
                             </div>
                         </td>
-                        <td class="col-md-4">
+                        <td>
                             <span class="text-silver col-xl-1">
                                 <img class="team_img_mini2" v-bind:src="match.dire_team.logo_url">{{match.dire_team.name}}</span>
                             <div class="row">
                                 <div class="col-xl-1"></div>
-                                <div class="col-xl-2" v-for="player in match.players.slice(5,10)" :key="player.name">
+                                <div class="col-xl-2" v-for="player in match.players.slice(5,6)" :key="player.name">
                                     <img class="hero_pick" v-bind:src="require('../assets/Hero-icons/' + player.hero_id + '.png')">
                                 </div>
                                 <div class="col-xl-1"></div>
@@ -54,7 +56,7 @@
                                 </div>
                             </div>
                         </td>
-                         <td class=" col-md-1 text-silver align-middle">{{secondsToMinutes(match.duration)}}</td>
+                         <td class="text-silver align-middle">{{secondsToMinutes(match.duration)}}</td>
                     </tr>
                 </tbody>
             </table>
