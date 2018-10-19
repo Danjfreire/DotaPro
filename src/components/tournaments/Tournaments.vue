@@ -65,22 +65,6 @@
               }
             }]
           }
-
-          /* ,{
-            t_name: "Dota 2 Asia Championship",
-            t_logo: "dac2018.jpg",
-            t_tier: "Major",
-            t_startDate: "2018-03-29",
-            t_endDate: "2018-04-07",
-            t_prizePool: "$1,000,000",
-            t_dpcPoints: "1500",
-            t_firstPlace: "Mineski",
-            t_firstPlaceLogo: "Mineski.png",
-            t_secondPlace: "PSG.LGD",
-            t_secondPlaceLogo: "PSG.LGD_full_logo.png",
-            t_thirdPlace: "Virtus.pro",
-            t_thirdPlaceLogo: "Virtus_Pro.png"
-          } */
         ]
       };
     }
@@ -96,6 +80,7 @@
 
   h2 {
     margin-top: 25px;
+    margin-bottom: 35px;
   }
 
 </style>

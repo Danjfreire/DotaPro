@@ -1,19 +1,16 @@
 <template>
-  <b-container>
-    <b-row>
+  <b-row>
+    <b-col class="margin-botton" md="4" v-for="tournament in tournaments" :key="tournament.name">
       <a href="#">
-        <b-col md="4" v-for="tournament in tournaments" :key="tournament.name">
-          <b-card class="goldenText" :title="tournament.name" img-src="https://i2.wp.com/www.vpesports.com/wp-content/uploads/2018/06/19.jpg?fit=1000%2C563&ssl=1"
-            bg-variant="dark">
-            <p class="card-text">
-              <b-img src="https://liquipedia.net/commons/images/c/cd/Cn.png" /> Shangai</p>
-            <p>{{tournament.startDate}} to {{tournament.endDate}}</p>
-            <pre class="goldenText">{{tournament.prizePool}}     {{tournament.points}} DPC points</pre>
-          </b-card>
-        </b-col>
+        <b-card class="goldenText" :title="teste" img-src="https://i2.wp.com/www.vpesports.com/wp-content/uploads/2018/06/19.jpg?fit=1000%2C563&ssl=1"
+          bg-variant="dark">
+          <p class="card-text">
+            <b-img src="https://liquipedia.net/commons/images/c/cd/Cn.png" /> Shangai</p>
+          <p>{{tournament.startDate}} to {{tournament.endDate}}</p>
+        </b-card>
       </a>
-    </b-row>
-  </b-container>
+    </b-col>
+  </b-row>
 </template>
 
 <script>
@@ -42,3 +39,12 @@
   };
 
 </script>
+
+<style>
+
+  .margin-botton{
+    margin-bottom: 20px;
+  }
+
+</style>
+
