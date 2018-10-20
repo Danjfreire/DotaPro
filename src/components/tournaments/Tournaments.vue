@@ -24,47 +24,55 @@
 
 <script>
   import tournamentCard from "./Tournament-card.vue";
+  import axios from 'axios'
 
   export default {
     name: "Tournaments",
     components: {
       tournamentCard
     },
-    // created() {
+     created() {
+       axios.get('http://localhost:5000/tournaments')
+       .then(res => {
+         this.tournaments = res.data;
+         console.log("RES",res.data[0]);
+       })
+       .catch(error => { console.error(error) })
     //   this.$http.get("http://localhost:5000/tournaments").then(response => {
     //     this.tournaments = response.body;
     //   }, response => {
     //     //error callback
     //   })
-    // },
+     },
     data() {
       return {
-        tournaments: [{
-            name: "China Dota2 Super Major",
-            logo: "rsz_china_super_major.jpg",
-            tier: "Major",
-            startDate: "2018-06-02",
-            endDate: "2018-06-10",
-            prizePool: "$1,500,000",
-            points: "2250",
-            standings: [{
-              id: 1,
-              place: "1st",
-              prize: "555,000",
-              points: "1,125",
-              team_id: 2163,
-              team: {
-                id: 2,
-                opendotaID: 2163,
-                wins: 686,
-                losses: 426,
-                name: "Team Liquid",
-                tag: "Liquid",
-                logo: "https://steamcdn-a.akamaihd.net/apps/dota2/images/team_logos/2163.png"
+        tournaments: [
+        //   {
+        //     name: "China Dota2 Super Major",
+        //     logo: "rsz_china_super_major.jpg",
+        //     tier: "Major",
+        //     startDate: "2018-06-02",
+        //     endDate: "2018-06-10",
+        //     prizePool: "$1,500,000",
+        //     points: "2250",
+        //     standings: [{
+        //       id: 1,
+        //       place: "1st",
+        //       prize: "555,000",
+        //       points: "1,125",
+        //       team_id: 2163,
+        //       team: {
+        //         id: 2,
+        //         opendotaID: 2163,
+        //         wins: 686,
+        //         losses: 426,
+        //         name: "Team Liquid",
+        //         tag: "Liquid",
+        //         logo: "https://steamcdn-a.akamaihd.net/apps/dota2/images/team_logos/2163.png"
 
-              }
-            }]
-          }
+        //       }
+        //     }]
+        //  }
         ]
       };
     }

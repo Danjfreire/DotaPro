@@ -2,7 +2,7 @@
   <b-row>
     <b-col class="margin-botton" md="4" v-for="tournament in tournaments" :key="tournament.name">
       <a href="#">
-        <b-card class="goldenText" :title="teste" img-src="https://i2.wp.com/www.vpesports.com/wp-content/uploads/2018/06/19.jpg?fit=1000%2C563&ssl=1"
+        <b-card class="goldenText" :title="tournament.name" img-src="https://i2.wp.com/www.vpesports.com/wp-content/uploads/2018/06/19.jpg?fit=1000%2C563&ssl=1"
           bg-variant="dark">
           <p class="card-text">
             <b-img src="https://liquipedia.net/commons/images/c/cd/Cn.png" /> Shangai</p>
