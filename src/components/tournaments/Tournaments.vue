@@ -38,11 +38,6 @@
          console.log("RES",res.data[0]);
        })
        .catch(error => { console.error(error) })
-    //   this.$http.get("http://localhost:5000/tournaments").then(response => {
-    //     this.tournaments = response.body;
-    //   }, response => {
-    //     //error callback
-    //   })
      },
     data() {
       return {

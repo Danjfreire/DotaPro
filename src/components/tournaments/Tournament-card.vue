@@ -1,7 +1,7 @@
 <template>
   <b-row>
     <b-col class="margin-botton" md="4" v-for="tournament in tournaments" :key="tournament.name">
-      <a href="#">
+      <a href="#/tournament">
         <b-card class="goldenText" :title="tournament.name" img-src="https://i2.wp.com/www.vpesports.com/wp-content/uploads/2018/06/19.jpg?fit=1000%2C563&ssl=1"
           bg-variant="dark">
           <p class="card-text">
